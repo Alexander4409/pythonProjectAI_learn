@@ -19,3 +19,5 @@
 # list - [1,3,2]
 # dict - {key:value}
 # set - {1,4,2}
+
+#   читать - https://metanit.com/python/tutorial/2.2.php
