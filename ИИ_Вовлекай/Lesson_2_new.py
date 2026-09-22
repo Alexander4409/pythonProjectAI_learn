@@ -51,3 +51,5 @@
 # print(round(num, 2))
 # иттератор - https://habr.com/ru/companies/domclick/articles/674194/
 lst_1 = []
+
+# инстркуция по связыванию питона и пайчарма -https://inf.tgl.net.ru/wp-content/uploads/2023/04/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F-Python-PyCharm.pdf
