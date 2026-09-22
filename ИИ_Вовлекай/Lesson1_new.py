@@ -29,19 +29,18 @@
 #bool - True или False (булева логика)
 
 # Функция проверки id
-def test_id_func() -> None:
-    num = 10
-    num_2 = num
-
-    print(f'num:id {id(num)}')
-    print(f'num:id {id(num_2)}')
-
-    num -= 1#Икримент
-    print(f'num:id {id(num)}')
-
-
-
-test_id_func()
+# def test_id_func() -> None:
+#     num = 10
+#     num_2 = num
+#
+#     print(f'num:id {id(num)}')
+#     print(f'num_2:id {id(num_2)}')
+#
+#     num += 1#Икримент
+#     print(f'num:id {id(num)}')
+#
+#
+# test_id_func()
 
 #В случае использования оператора (=) происходит копирование информации
 # при этом ячейка памяти в которую записались данные не дублируется
@@ -49,16 +48,17 @@ test_id_func()
 # num:id 140732803324632
 
 # Работа со списками
-def test_id_funcList() -> None:
-    lst_1 = [10]
-    lst_2 = lst_1
-
-    print(f'list1:id {id(lst_1)}')
-    print(f'list2:id {id(lst_2)}')
-
-    lst_1.append(11)
-    print(f'list1:id {id(lst_1)}')
-    print(f'list2:id {id(lst_2)}')
-
-
-test_id_funcList()
+# def test_id_funcList() -> None:
+#     lst_1 = [10]
+#     lst_2 = lst_1
+#
+#     print(f'list1:id {id(lst_1)}')
+#     print(f'list2:id {id(lst_2)}')
+#
+#     lst_1.append(11)
+#     print(f'list1:id {id(lst_1)}')
+#     print(f'list2:id {id(lst_2)}')
+#
+#
+# test_id_funcList()
+# изменяемые объекты хранятся в оперативной памяти
