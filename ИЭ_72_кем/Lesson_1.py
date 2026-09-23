@@ -21,3 +21,4 @@
 # set - {1,4,2}
 
 #   читать - https://metanit.com/python/tutorial/2.2.php
+
