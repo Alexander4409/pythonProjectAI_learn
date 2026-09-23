@@ -48,6 +48,14 @@ class Tumb:
         boxes_items = self.boxes[1] + self.boxes[2] + self.boxes[3]
         return ", ".join(boxes_items)
 
+    def __iter__(self):
+        # получить сумму всех ящиков
+        boxes_items = self.boxes[1] + self.boxes[2] + self.boxes[3]
+        # получение итератора
+        itr = iter(boxes_items)
+        return itr
+
+
 
 
 
