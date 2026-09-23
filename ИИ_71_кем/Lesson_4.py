@@ -1,23 +1,32 @@
-# программа для определения объема памяти пользовательского пароля
-# password = input("Enter user password")
+def main():
+    password = input("Enter user password: ")
+    password_bytes = password.encode("utf-8")
+    byte_count = len(password_bytes)
+    print("Choose unit to convert to:")
+    print("1. KB")
+    print("2. MB")
+    print("3. GB")
+    print("4. TB")
 
-# password_bytes = password.encode("utf-8")
-#
-# size_in_bytes = len(password_bytes)
-# size_in_bits = size_in_bytes * 8
-# size_in_kilobytes  = size_in_bytes / 1024
-#
-# print(f"results :\n"
-#       f"User passcode - {password}\n"
-#       f"symbol count - {len(password)} \n"
-#       f"kilobytes - {size_in_kilobytes}
+    try:
+        user_choice = int(input("Your choice (1-4): "))
+    except ValueError:
+        print("Error: please enter a number between 1 and 4.")
+        return
 
-# реальный объем памяти
-import sys
+    units = {
+        1: (1024, "KB"),
+        2: (1024**2, "MB"),
+        3: (1024**3, "GB"),
+        4: (1024**4, "TB")
+    }
 
+    if user_choice in units:
+        divider, unit_name = units[user_choice]
+        res = byte_count / divider
+        print(f"Result: {byte_count} bytes = {round(res, 4)} {unit_name}")
+    else:
+        print("Error: invalid choice. Please select 1, 2, 3, or 4.")
 
-password = input("Enter user password")
-
-size_in_bytes = sys.getsizeof(password)
-print(len(password))
-print(size_in_bytes)
+if __name__ == "__main__":
+    main()
