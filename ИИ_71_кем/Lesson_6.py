@@ -1,35 +1,4 @@
-# Многомерные массивы (списки)
-# matrix = [[1,2,3],[3,4,5],[6,7,8]]
-# matrix[1][1]=0
-# print(matrix)
-# вывод матрици
-# for row in matrix:
-#     for item in row:
-#         print(item, end=" ")
-#     print()
 
-# генератор матрицы
-rows, colms = 5,5
-matrix = [["*" for _ in range(colms)] for _ in range(rows)]
-
-for row in matrix:
-    for item in row:
-        print(item, end=" ")
-    print()
-
-# 1 сгенерировать марицу по типу
-#          * * 0 * *
-#          * * 0 * *
-#          * * 0 * *
-#          * * 0 * *
-#          * * 0 * *
-
-# 2 сгенерировать марицу по типу
-#          * * 0 * *
-#          * * 0 * *
-#          0 0 0 0 0
-#          * * 0 * *
-#          * * 0 * *
 
 # 3 сгенерировать марицу по типу
 #          0 * 0 * 0
@@ -37,3 +6,14 @@ for row in matrix:
 #          0 0 * 0 0
 #          * 0 0 0 *
 #          0 * 0 * 0
+# Задаем два вида строк
+row_even = ["0", "*", "0", "*", "0"]
+row_odd  = ["*", "0", "0", "0", "*"]
+matrix = [
+    row_even,
+    row_odd,
+    row_even,
+    row_odd,
+    row_even]
+for row in matrix:
+    print(*row)
