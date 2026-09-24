@@ -21,3 +21,5 @@ password = input("Enter user password")
 size_in_bytes = sys.getsizeof(password)
 print(len(password))
 print(size_in_bytes)
+
+
