@@ -5,6 +5,9 @@ def ask(sim_count, pass_count, users_count):
 
     pass_len = bait_on_token * pass_count
     result = pass_len * users_count
+
+    result = round(result)
+
     return f"bits: {result}"
 
 def main():
@@ -15,5 +18,4 @@ def main():
     print(ask(sim, pas, users))
 
 main()
-
 
