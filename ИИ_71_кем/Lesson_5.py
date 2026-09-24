@@ -2,3 +2,9 @@
 # пользователь вводит мощность алфавита
 # вводит длину паролей
 # вводит количество пользователей
+sim = int(input("введите количество символов в пароле"))
+encoding = int(input("кодировка"))
+num_password = int(input("количество паролей"))
+byts = sim * encoding * num_password
+kb = byts / 8 / 1024
+print(kb)
