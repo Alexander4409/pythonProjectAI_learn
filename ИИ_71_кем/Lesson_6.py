@@ -1,39 +1,13 @@
-# Многомерные массивы (списки)
-# matrix = [[1,2,3],[3,4,5],[6,7,8]]
-# matrix[1][1]=0
-# print(matrix)
-# вывод матрици
-# for row in matrix:
-#     for item in row:
-#         print(item, end=" ")
-#     print()
-
-# генератор матрицы
-rows, colms = 5,5
-matrix = [["*" for _ in range(colms)] for _ in range(rows)]
-
+rows, colms = (9, 25)
+matrix = [["❤️" for _ in range(colms)] for _ in range(rows)]
+text = "я люблю ивана николаевича"
+middle_row = rows // 2
+start_col = (colms - len(text)) // 2
+for i, char in enumerate(text):
+    current_col = start_col + i
+    if 0 <= current_col < colms:
+        matrix[middle_row][current_col] = char
 for row in matrix:
     for item in row:
         print(item, end=" ")
     print()
-
-# 1 сгенерировать марицу по типу
-#          * * 0 * *
-#          * * 0 * *
-#          * * 0 * *
-#          * * 0 * *
-#          * * 0 * *
-
-# 2 сгенерировать марицу по типу
-#          * * 0 * *
-#          * * 0 * *
-#          0 0 0 0 0
-#          * * 0 * *
-#          * * 0 * *
-
-# 3 сгенерировать марицу по типу
-#          0 * 0 * 0
-#          * 0 0 0 *
-#          0 0 * 0 0
-#          * 0 0 0 *
-#          0 * 0 * 0
