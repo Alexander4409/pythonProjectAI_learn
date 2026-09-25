@@ -14,15 +14,30 @@ from ИИ_71_кем.Lesson_5 import user_age
 #     print("Ваша категория - С")
 
 #глупый калькулятор -
-num1 = int(input("введите первое число - "))
-num2 = int(input("введите второе число - "))
-
-user_choice = int(input("____Выберите действие____\n"
-                        "1 - сложение \n"
-                        "2 - вычитание\n"
-                        "3 - ... "))
-if user_choice == 1:
-    print(num1+num2)
-elif user_choice == 2:
-    print(num1-num2)
+# num1 = int(input("введите первое число - "))
+# num2 = int(input("введите второе число - "))
+#
+# user_choice = int(input("____Вы берите действие____\n"
+#                         "1 - сложение \n"
+#                         "2 - вычитание\n"
+#                         "3 - ... "))
+# if user_choice == 1:
+#     print(num1+num2)
+# elif user_choice == 2:
+#     print(num1-num2)
 # дописать !
+
+language = "english"
+daytime = "morning"
+if language == "english":
+    print("English")
+    if daytime == "morning":
+        print("Good morning")
+    else:
+        print("Good evening")
+elif language == "deitch ":
+    print(" Deitch ")
+    if daytime == "morning":
+        print("Guten Morgen!")
+    else:
+        print("Guten Abend!")
