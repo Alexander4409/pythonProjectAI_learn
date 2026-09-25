@@ -32,3 +32,5 @@ num_2 = int(input("Введите 2 число"))
 if user_choice == 1:
     print(num_1 / num_2)
 #дописать
+elif user_choice == 2:
+    print(num_1*num_2)
