@@ -1,7 +1,7 @@
 #данные - сведенья которые записаны на каком либо носителе
 #информация - структурированные данные
 #знания - (алгоритм действий или набор инструкций)
-from ИИ_71_кем.Lesson_5 import user_age
+
 
 #Программа определения возраста
 # user_age = int(input("укажите свой возраст - "))
@@ -27,17 +27,21 @@ from ИИ_71_кем.Lesson_5 import user_age
 #     print(num1-num2)
 # дописать !
 
-language = "english"
-daytime = "morning"
-if language == "english":
-    print("English")
-    if daytime == "morning":
-        print("Good morning")
-    else:
-        print("Good evening")
-elif language == "deitch ":
-    print(" Deitch ")
-    if daytime == "morning":
-        print("Guten Morgen!")
-    else:
-        print("Guten Abend!")
+# language = "english"
+# daytime = "morning"
+# if language == "english":
+#     print("English")
+#     if daytime == "morning":
+#         print("Good morning")
+#     else:
+#         print("Good evening")
+# elif language == "deitch ":
+#     print(" Deitch ")
+#     if daytime == "morning":
+#         print("Guten Morgen!")
+#     else:
+#         print("Guten Abend!")
+
+#напишите программу с несколькими уровнями вложенности операторов if else
+# для определения типов шасси и набора
+# датчиков необходимых роботу для передвижения по разным поверхностям
