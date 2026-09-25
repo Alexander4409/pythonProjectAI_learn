@@ -21,16 +21,28 @@
 '''
 
 # меню программы для пользователя
-user_choice = int(input("___ Выберете нужное действие___ \n"
-                        "1 - деление \n"
-                        "2 - умножение \n"
-                        "3 - сумма"))
+# user_choice = int(input("___ Выберете нужное действие___ \n"
+#                         "1 - деление \n"
+#                         "2 - умножение \n"
+#                         "3 - сумма"))
+#
+# num_1 = int(input("Введите 1 число"))
+# num_2 = int(input("Введите 2 число"))
+#
+# if user_choice == 1:
+#     print(num_1 / num_2)
+# #дописать
+# elif user_choice == 2:
+#     print(num_1*num_2)
 
-num_1 = int(input("Введите 1 число"))
-num_2 = int(input("Введите 2 число"))
+# синтаксический сахар
 
-if user_choice == 1:
-    print(num_1 / num_2)
-#дописать
-elif user_choice == 2:
-    print(num_1*num_2)
+number = 10
+number += "f"
+print(number)  # 15
+
+number -= 3
+print(number)  # 12
+
+number *= 4
+print(number)  # 48
