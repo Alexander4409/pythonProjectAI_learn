@@ -15,3 +15,20 @@
 #     print("Ваша категория - В")
 # else:
 #     print("Ваша категория - С")
+
+language = "russian"
+daytime = "morning"
+if language == "english":
+    if daytime == "morning":
+        print("Good morning")
+    else:
+        print("Good evening")
+else:
+    if daytime == "morning":
+        print("Доброе утро")
+    else:
+        print("Добрый вечер")
+
+#напишите программу с несколькими уровнями вложенности операторов if else
+# для определения типов шасси и набора
+# датчиков необходимых роботу для передвижения по разным поверхностям
