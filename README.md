@@ -14,6 +14,7 @@
 <a href="ИИ_71_кем/README.md"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/ii-71-kem.svg" alt="ИИ-71" width="125"></a>
 <a href="ИИ_72_кем/README.md"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/ii-71-kem.svg" alt="ИИ-72" width="125"></a>
 <a href="ИИ_81_кем/README.md"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/ii-71-kem.svg" alt="ИИ-81" width="125"></a>
+<a href="ИИ_82_кем/README.md"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/ii-71-kem.svg" alt="ИИ-82" width="125"></a>
 </div>
 
 ### ИЭ
