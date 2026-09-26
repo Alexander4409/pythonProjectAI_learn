@@ -44,3 +44,4 @@ my_common_list = CommonList()
 my_common_list.append_to_common_list("Hi dady")
 my_common_list.append_to_common_list("Hi momy")
 print(my_common_list)
+# эксперимент с id сравнить наш лист с обычным списком
