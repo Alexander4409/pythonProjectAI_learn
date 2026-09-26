@@ -81,9 +81,9 @@ def folder_button(folder):
     else:
         match = re.match(r"(ИИ|ИЭ)_(\d)(\d)_кем$", folder.name)
         prefix = "ii" if match and match.group(1) == "ИИ" else "ie"
-        filename = f"{prefix}-{match.group(2)}{match.group(3)}-kem.svg" if match else "ii-71-kem.svg"
-    if not (ROOT / ".github" / "assets" / "buttons" / filename).exists():
-        filename = "vovlekai-online.svg" if kind == "online" else "ii-71-kem.svg"
+        filename = f"{prefix}-{match.group(2)}{match.group(3)}-kem.svg" if match else ""
+    if not filename or not (ROOT / ".github" / "assets" / "buttons" / filename).exists():
+        return f'<a href="{folder.name}/README.md">{title}</a>'
     return f'<a href="{folder.name}/README.md">{button(f"{ASSETS}/{filename}", title, 125)}</a>'
 
 
