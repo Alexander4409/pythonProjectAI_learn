@@ -60,7 +60,12 @@ def group_readme(folder):
 
 def folder_button(folder):
     title, _, kind = group_info(folder)
-    filename = "vovlekai-online.svg" if kind == "online" else f"{folder.name.lower().replace('_', '-')}.svg"
+    if kind == "online":
+        filename = "vovlekai-online.svg"
+    else:
+        match = re.match(r"(ИИ|ИЭ)_(\d)(\d)_кем$", folder.name)
+        prefix = "ii" if match and match.group(1) == "ИИ" else "ie"
+        filename = f"{prefix}-{match.group(2)}{match.group(3)}-kem.svg" if match else "ii-71-kem.svg"
     if not (ROOT / ".github" / "assets" / "buttons" / filename).exists():
         filename = "vovlekai-online.svg" if kind == "online" else "ii-71-kem.svg"
     return f'<a href="{folder.name}/README.md">{button(f"{ASSETS}/{filename}", title, 125)}</a>'
