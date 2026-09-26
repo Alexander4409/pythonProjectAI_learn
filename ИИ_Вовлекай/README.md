@@ -12,5 +12,5 @@
 
 | № | Файл | Действие |
 |---:|---|---|
-| 1 | `Lesson1_new.py` | <a href="Lesson1_new.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/ed5b85e1c8e11f050640527250903af0fbb55ab5/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
-| 2 | `Lesson_2_new.py` | <a href="Lesson_2_new.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/ed5b85e1c8e11f050640527250903af0fbb55ab5/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
+| 1 | `Lesson1_new.py` | <a href="Lesson1_new.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
+| 2 | `Lesson_2_new.py` | <a href="Lesson_2_new.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
