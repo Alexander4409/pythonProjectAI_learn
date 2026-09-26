@@ -4,6 +4,9 @@ class TumbIterator:
         self.some_objects = some_objects
         self.current = 0
 
+    def __iter__(self):
+        return self
+
     def __next__(self):
         if self.current < len(self.some_objects):
             result = self.some_objects[self.current]
