@@ -31,5 +31,16 @@ class CommonList:
         self._array = new_array
         self._capacity = new_capacity
 
-    def _make_array(self, capacity):
+    def make_array(self, capacity):
 
+        return (capacity * ctypes.py_object)()
+
+    def __repr__(self):
+        items = [str(self._array[i]) for i in range(self._length)]
+        return "#" + ' & '.join(items) + "#"
+
+
+my_common_list = CommonList()
+my_common_list.append_to_common_list("Hi dady")
+my_common_list.append_to_common_list("Hi momy")
+print(my_common_list)
