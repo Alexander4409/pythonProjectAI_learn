@@ -4,24 +4,13 @@
 
 ## Быстрые действия
 
-<<<<<<< HEAD
-<a href="../README.md"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/4bf2e1008136489048e47cebdccdef2a903f24ad/.github/assets/buttons/back.svg" alt="Назад" width="115"></a>
-<a href="https://github.com/Alexander4409/pythonProjectAI_learn/archive/refs/heads/master.zip"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/4bf2e1008136489048e47cebdccdef2a903f24ad/.github/assets/buttons/download.svg" alt="Скачать" width="125"></a>
-<a href="https://github.com/Alexander4409/pythonProjectAI_learn/fork"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/4bf2e1008136489048e47cebdccdef2a903f24ad/.github/assets/buttons/fork.svg" alt="Форк" width="95"></a>
-=======
-<a href="../README.md"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/d5121234c9a1110c366315b44e8f9ff6f0f5405f/.github/assets/buttons/back.svg" alt="Назад" width="115"></a>
-<a href="https://github.com/Alexander4409/pythonProjectAI_learn/archive/refs/heads/master.zip"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/d5121234c9a1110c366315b44e8f9ff6f0f5405f/.github/assets/buttons/download.svg" alt="Скачать" width="125"></a>
-<a href="https://github.com/Alexander4409/pythonProjectAI_learn/fork"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/d5121234c9a1110c366315b44e8f9ff6f0f5405f/.github/assets/buttons/fork.svg" alt="Форк" width="95"></a>
->>>>>>> 6744ecf (README)
+<a href="../README.md"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/ed5b85e1c8e11f050640527250903af0fbb55ab5/.github/assets/buttons/back.svg" alt="Назад" width="115"></a>
+<a href="https://github.com/Alexander4409/pythonProjectAI_learn/archive/refs/heads/master.zip"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/ed5b85e1c8e11f050640527250903af0fbb55ab5/.github/assets/buttons/download.svg" alt="Скачать" width="125"></a>
+<a href="https://github.com/Alexander4409/pythonProjectAI_learn/fork"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/ed5b85e1c8e11f050640527250903af0fbb55ab5/.github/assets/buttons/fork.svg" alt="Форк" width="95"></a>
 
 ## Уроки
 
 | № | Файл | Действие |
 |---:|---|---|
-<<<<<<< HEAD
-| 1 | `Lesson_1.py` | <a href="Lesson_1.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/4bf2e1008136489048e47cebdccdef2a903f24ad/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
-| 2 | `Lesson_2.py` | <a href="Lesson_2.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/4bf2e1008136489048e47cebdccdef2a903f24ad/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
-=======
-| 1 | `Lesson_1.py` | <a href="Lesson_1.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/d5121234c9a1110c366315b44e8f9ff6f0f5405f/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
-| 2 | `Lesson_2.py` | <a href="Lesson_2.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/d5121234c9a1110c366315b44e8f9ff6f0f5405f/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
->>>>>>> 6744ecf (README)
+| 1 | `Lesson_1.py` | <a href="Lesson_1.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/ed5b85e1c8e11f050640527250903af0fbb55ab5/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
+| 2 | `Lesson_2.py` | <a href="Lesson_2.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/ed5b85e1c8e11f050640527250903af0fbb55ab5/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
