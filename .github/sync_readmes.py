@@ -1,10 +1,8 @@
 from pathlib import Path
 import re
-import os
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSET_REF = os.environ.get("README_ASSET_REF", "master")
-ASSETS = f"https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/{ASSET_REF}/.github/assets/buttons"
+ASSETS = "https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons"
 DOWNLOAD = "https://github.com/Alexander4409/pythonProjectAI_learn/archive/refs/heads/master.zip"
 FORK = "https://github.com/Alexander4409/pythonProjectAI_learn/fork"
 TEACHER = "https://github.com/Alexander4409/"
@@ -33,13 +31,17 @@ def group_info(folder):
     return f"{direction}-{grade}{group}", f"{grade} класс · {group} группа · направление {direction}", "group"
 
 
-def group_readme(folder):
-    title, description, _ = group_info(folder)
+def lesson_table(folder):
     lessons = lesson_files(folder)
     rows = []
     for index, lesson in enumerate(lessons, 1):
         rows.append(f'| {index} | `{lesson.name}` | <a href="{lesson.name}">{button(f"{ASSETS}/open.svg", "Открыть", 105)}</a> |')
-    table = "\n".join(rows) if rows else "| — | Уроки пока не опубликованы | — |"
+    return "\n".join(rows) if rows else "| — | Уроки пока не опубликованы | — |"
+
+
+def group_readme(folder):
+    title, description, _ = group_info(folder)
+    table = lesson_table(folder)
     return f'''# {title}
 
 {description}
@@ -58,11 +60,30 @@ def group_readme(folder):
 '''
 
 
+def update_group_readme(folder):
+    readme = folder / "README.md"
+    if not readme.exists():
+        readme.write_text(group_readme(folder), encoding="utf-8")
+        return
+    current = readme.read_text(encoding="utf-8")
+    section = f"## Уроки\n\n| № | Файл | Действие |\n|---:|---|---|\n{lesson_table(folder)}\n"
+    if re.search(r"(?ms)^## Уроки\s*\n.*\Z", current):
+        current = re.sub(r"(?ms)^## Уроки\s*\n.*\Z", section, current)
+    else:
+        current = current.rstrip() + "\n\n" + section
+    readme.write_text(current, encoding="utf-8")
+
+
 def folder_button(folder):
     title, _, kind = group_info(folder)
-    filename = "vovlekai-online.svg" if kind == "online" else f"{folder.name.lower().replace('_', '-')}.svg"
-    if not (ROOT / ".github" / "assets" / "buttons" / filename).exists():
-        filename = "vovlekai-online.svg" if kind == "online" else "ii-71-kem.svg"
+    if kind == "online":
+        filename = "vovlekai-online.svg"
+    else:
+        match = re.match(r"(ИИ|ИЭ)_(\d)(\d)_кем$", folder.name)
+        prefix = "ii" if match and match.group(1) == "ИИ" else "ie"
+        filename = f"{prefix}-{match.group(2)}{match.group(3)}-kem.svg" if match else ""
+    if not filename or not (ROOT / ".github" / "assets" / "buttons" / filename).exists():
+        return f'<a href="{folder.name}/README.md">{title}</a>'
     return f'<a href="{folder.name}/README.md">{button(f"{ASSETS}/{filename}", title, 125)}</a>'
 
 
@@ -118,8 +139,7 @@ def main():
         key=lambda item: item.name.lower(),
     )
     for folder in folders:
-        (folder / "README.md").write_text(group_readme(folder), encoding="utf-8")
-    (ROOT / "README.md").write_text(main_readme(folders), encoding="utf-8")
+        update_group_readme(folder)
     print(f"Обновлено групп: {len(folders)}")
 
 

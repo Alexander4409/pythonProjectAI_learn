@@ -24,8 +24,6 @@ jobs:
         with:
           python-version: '3.x'
       - run: python .github/sync_readmes.py
-        env:
-          README_ASSET_REF: ${{ github.sha }}
       - name: Commit README changes
         run: |
           git config user.name github-actions[bot]
