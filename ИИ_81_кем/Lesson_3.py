@@ -9,6 +9,17 @@ class TumbIterator:
             result = self.some_objects[self.current]
             self.current += 1
             return result
+        raise StopIteration
+
+
+    def to_start(self):
+        self.current = 0
+
+    def to_current(self,val):
+        if val >= len(self.some_objects) or val < 0:
+            print("Cursor Error!")
+        else:
+            self.current = val
 
 
 #класс тумбочка с ящиками
@@ -49,18 +60,20 @@ tumb_1.add_to_box("карандаш",2 )
 tumb_1.add_to_box("яблоко",3 )
 tumb_1.add_to_box("книга",1 )
 #
+for el in tumb_1:
+    print(el)
 
-
+#iter() - https://docs.python.org/3.12/library/functions.html#iter
 # придумать правило итерации у тумбочки
 
-it = iter(tumb_1)
-print(next(it))
-print(next(it))
-print(next(it))
-print(next(it))
-print(next(it))
-print(next(it))
-print(next(it))
+# it = iter(tumb_1)
+# print(next(it))
+# print(next(it))
+# print(next(it))
+# print(next(it))
+# print(next(it))
+# print(next(it))
+# print(next(it))
 
 
 # my_ugly_list = [[{},[]],{},"",tumb_1]
