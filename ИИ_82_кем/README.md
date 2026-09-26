@@ -1,6 +1,6 @@
-# ИЭ-81
+# ИИ-82
 
-8 класс · 1 группа · направление ИЭ
+8 класс · 2 группа · направление ИИ
 
 ## Быстрые действия
 
@@ -12,5 +12,4 @@
 
 | № | Файл | Действие |
 |---:|---|---|
-| 1 | `Lesson_1.py` | <a href="Lesson_1.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/3ebb5f3480c7d390c9f21e57d2ce827172d4841d/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
-| 2 | `Lesson_2.py` | <a href="Lesson_2.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/3ebb5f3480c7d390c9f21e57d2ce827172d4841d/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
+| 1 | `test.py` | <a href="test.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/3ebb5f3480c7d390c9f21e57d2ce827172d4841d/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |

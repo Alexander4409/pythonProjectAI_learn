@@ -1,0 +1,42 @@
+name: Sync README
+
+on:
+  push:
+    paths:
+      - '**/*.py'
+      - '.github/sync_readmes.py'
+      - '.github/assets/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python .github/sync_readmes.py
+        env:
+          README_ASSET_REF: ${{ github.sha }}
+      - name: Commit README changes
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A -- README.md '**/README.md'
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "README"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            git rebase --abort || true
+            sleep 2
+          done
+          exit 1
