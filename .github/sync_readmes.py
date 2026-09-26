@@ -1,8 +1,10 @@
 from pathlib import Path
 import re
+import os
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSETS = "https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons"
+ASSET_REF = os.environ.get("README_ASSET_REF", "master")
+ASSETS = f"https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/{ASSET_REF}/.github/assets/buttons"
 DOWNLOAD = "https://github.com/Alexander4409/pythonProjectAI_learn/archive/refs/heads/master.zip"
 FORK = "https://github.com/Alexander4409/pythonProjectAI_learn/fork"
 TEACHER = "https://github.com/Alexander4409/"
