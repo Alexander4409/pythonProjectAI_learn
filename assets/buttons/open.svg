@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="72" viewBox="0 0 154 72" role="img" aria-label="Открыть">
+  <rect x="1" y="1" width="152" height="70" rx="22" fill="#2563EB" stroke="#1D4ED8" stroke-width="2"/>
+  <svg x="24" y="24" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h14" />
+    <path d="m13 6 6 6-6 6" />
+  </svg>
+  <text x="62" y="45" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">Открыть</text>
+</svg>
