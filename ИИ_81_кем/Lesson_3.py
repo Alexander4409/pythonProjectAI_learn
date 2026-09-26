@@ -1,7 +1,15 @@
 
 class TumbIterator:
+    def __init__(self,some_objects):
+        self.some_objects = some_objects
+        self.current = 0
+
     def __next__(self):
-        pass
+        if self.current < len(self.some_objects):
+            result = self.some_objects[self.current]
+            self.current += 1
+            return result
+
 
 #класс тумбочка с ящиками
 class Tumb:
@@ -30,16 +38,12 @@ class Tumb:
         return ", ".join(boxes_items)
 
     def __iter__(self):
-        return TumbIterator
-
-
-
+        return TumbIterator(self.boxes[1]+self.boxes[2]+self.boxes[3])
 
 
 
 
 tumb_1 = Tumb()
-print(iter(tumb_1))
 tumb_1.add_to_box("ножницы",1 )
 tumb_1.add_to_box("карандаш",2 )
 tumb_1.add_to_box("яблоко",3 )
@@ -48,6 +52,16 @@ tumb_1.add_to_box("книга",1 )
 
 
 # придумать правило итерации у тумбочки
+
+it = iter(tumb_1)
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+
 
 # my_ugly_list = [[{},[]],{},"",tumb_1]
 #
