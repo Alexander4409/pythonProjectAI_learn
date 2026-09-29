@@ -47,8 +47,9 @@ except StopIteration:
 print("Программа завершила работу ")
 
 
+
+# ссылка на скачивание питона - https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz
+# Инструкция по установке питона - https://metanit.com/python/tutorial/1.2.php
 # ссылка на пайчарм - https://gb.ru/manualpycharmcommunity
 # Общая инструкция по работе с пайчарм и питон - https://habr.com/ru/articles/720480/
 # инстркуция по связыванию питона и пайчарма -https://inf.tgl.net.ru/wp-content/uploads/2023/04/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F-Python-PyCharm.pdf
-# ссылка на скачивание питона - https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz
-# Инструкция по установке питона - https://metanit.com/python/tutorial/1.2.php
