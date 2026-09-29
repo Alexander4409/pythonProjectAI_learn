@@ -17,7 +17,7 @@
 <a href="ИИ_82_кем/README.md"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/ed5b85e1c8e11f050640527250903af0fbb55ab5/.github/assets/buttons/ii-82-kem.svg" alt="ИИ-82" width="125"></a>
 </div>
 
-### ИЭ
+### ИЭ — интеллектуальная электромеханика
 
 <div align="center">
 <a href="ИЭ_71_кем/README.md"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/ed5b85e1c8e11f050640527250903af0fbb55ab5/.github/assets/buttons/ie-71-kem.svg" alt="ИЭ-71" width="125"></a>
