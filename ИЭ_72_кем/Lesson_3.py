@@ -18,3 +18,11 @@ if operation == 1:
 elif operation == 2:
     print(num_1-num_2)
 elif operation == 3:
+    try:
+        res = num_1 / num_2
+        print(res)
+    except ZeroDivisionError:
+        print("Error")
+
+
+
