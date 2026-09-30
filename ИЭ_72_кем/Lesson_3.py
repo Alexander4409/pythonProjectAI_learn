@@ -12,6 +12,9 @@ while True:
                               f"2 - вычитание\n"
                               f"3 - деление\n"
                               f"4 - остановка программы"))
+        if operation == 4:
+            print("Good by")
+            break
 
         num_1 = int(input(" введите 1ое число "))
         num_2 = int(input(" введите 2ое число "))
@@ -28,8 +31,7 @@ while True:
                 print(res)
             except ZeroDivisionError:
                 print("Error2")
-        elif operation == 4:
-            break
+
 
     except ValueError:
         print("Error1")
