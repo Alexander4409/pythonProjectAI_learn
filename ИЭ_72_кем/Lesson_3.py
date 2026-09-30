@@ -13,3 +13,8 @@ operation = int(input(f"___Выбор операции___\n"
                       f"3 - деление"))
 # дописать меню для пользователя
 
+if operation == 1:
+    print(num_1+num_2)
+elif operation == 2:
+    print(num_1-num_2)
+elif operation == 3:
