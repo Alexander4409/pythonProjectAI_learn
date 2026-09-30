@@ -3,26 +3,31 @@
 # num_1 = num + 2
 # # синтаксический сахар - += / -=
 # print(num)
+try:
+    num_1 = int(input(" введите 1ое число "))
+    num_2 = int(input(" введите 2ое число "))
 
-num_1 = int(input(" введите 1ое число "))
-num_2 = int(input(" введите 2ое число "))
+    operation = int(input(f"___Выбор операции___\n"
+                            f"1 - сложение\n"
+                            f"2 - вычитание\n"
+                            f"3 - деление" ))
 
-operation = int(input(f"___Выбор операции___\n"
-                      f"1 - сложение\n"
-                      f"2 - вычитание\n"
-                      f"3 - деление" ))
 # дописать меню для пользователя
 
-if operation == 1:
-    print(num_1+num_2)
-elif operation == 2:
-    print(num_1-num_2)
-elif operation == 3:
-    try:
-        res = num_1 / num_2
-        print(res)
-    except ZeroDivisionError:
-        print("Error")
+    if operation == 1:
+        print(num_1+num_2)
+    elif operation == 2:
+        print(num_1-num_2)
+    elif operation == 3:
+        try:
+            res = num_1 / num_2
+            print(res)
+        except ZeroDivisionError:
+            print("Error2")
+
+except ValueError:
+    print("Error1")
+
 
 
 
