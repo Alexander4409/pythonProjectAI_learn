@@ -10,10 +10,9 @@
 
 rows, colms = 5, 5
 
-matrix = [["*" for _ in range (rows)] for _ in range (colms)]
+matrix = [["*" if r == 2 or c == 2 else "0" for c in range(colms)]for r in range(rows)]
 
 for row in matrix:
-    row[2] = '0'
     for item in row:
         print(item, end = " ")
     print()
