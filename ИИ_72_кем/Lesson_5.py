@@ -10,9 +10,10 @@
 
 rows, colms = 5, 5
 
-matrix = [["0" for _ in range (rows)] for _ in range (colms)]
+matrix = [["*" for _ in range (rows)] for _ in range (colms)]
 
 for row in matrix:
+    row[2] = '0'
     for item in row:
         print(item, end = " ")
     print()
@@ -23,4 +24,8 @@ for row in matrix:
 # 0 0 * 0 0
 # 0 0 * 0 0
 
-
+# 0 0 * 0 0
+# 0 0 * 0 0
+# * * * * *
+# 0 0 * 0 0
+# 0 0 * 0 0
