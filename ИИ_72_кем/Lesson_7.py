@@ -20,4 +20,12 @@ users = {"Tom":{"phone":+595534534,
                 "email":"Super@user1.com",
                 "spin_code":1}}
 
-print(users["Tom"])
+# print(users["Tom"])
+#
+# user1 = users.get("Bob")
+# print(user1)
+
+# del users["Bob"]
+# print(users)
+dict.update(users["Tom"],{"age": 26, "city": "Москва"})
+print(users)
