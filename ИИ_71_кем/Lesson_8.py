@@ -4,9 +4,42 @@
 # главную диагональ и побочную диагональ. В результате единицы в массиве должны
 # образовывать изображение звездочки. Выведите полученный массив на экран,
 # разделяя элементы массива пробелами.
+n = int(input())
+matrix = [["." for _ in range(n)] for _ in range(n)]
 
+for i in range(n):
+  for j in range(n):
+
+    if i == n // 2 or j == n // 2 or i == j or i == n - 1 - j:
+      matrix[i][j] = "*"
+for row in matrix:
+    for item in row:
+        print(item, end=" ")
+    print()
+# print(best_i , best_j)
 # 5. Найдите индексы первого вхождения максимального элемента. Выведите два числа:
 # номер строки и номер столбца, в которых стоит наибольший элемент в двумерном массиве.
 # Если таких элементов несколько, то выводится тот, у которого меньше номер строки,
 # а если номера строк равны то тот, у которого меньше номер столбца.
 # Программа получает на вход размеры массива n и m, затем n строк по m чисел в каждой.
+n = int(input())
+m = int(input())
+
+
+max_val = None
+best_i = 0
+best_j = 0
+
+
+for i in range(n):
+
+    for j in range(m):
+        current_val = int(input())
+
+
+        if max_val is None or current_val > max_val:
+            max_val = current_val
+            best_i = i
+            best_j = j
+
+print(best_i , best_j)
