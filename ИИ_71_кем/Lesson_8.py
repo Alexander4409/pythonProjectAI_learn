@@ -4,7 +4,7 @@ matrix = []
 for r in range(rows):
     row = []
     for c in range(colms):
-        if r == rows // 2: 
+        if r == rows // 2 or c == colms // 2:
             row.append(".")
         elif c == r:
             row.append(1)
@@ -26,6 +26,7 @@ for row in matrix:
     for item in row:
         print(item, end=" ")
     print()
+
 
 
 # 5. Найдите индексы первого вхождения максимального элемента. Выведите два числа:
