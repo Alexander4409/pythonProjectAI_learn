@@ -84,4 +84,5 @@ defective_count = 0
 for detail_size in factory:
     print(f"сканирование детали - {detail_size} мм")
     # дописать код
+    # читать - https://habr.com/ru/articles/132554/
 
