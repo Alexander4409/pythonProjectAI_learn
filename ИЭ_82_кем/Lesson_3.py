@@ -53,4 +53,4 @@ try:
         next_val = next(iter_obj)
         print(f"Очередное значение - {next_val}")
 except StopIteration:
-    print("Итерация завершена")
+    print("Итерация завершена") # читать - https://habr.com/ru/articles/132554/
