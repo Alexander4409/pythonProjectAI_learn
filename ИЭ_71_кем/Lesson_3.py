@@ -35,3 +35,19 @@
 #     j = 1
 #     i += 1
 
+# итератор
+lst = [2,12,31,31,2]
+str = "fdewoifjefj84"
+tupl = (2,4,2,5)
+dct = {1:"sdfdf", 2:"sddw"}
+
+num = 134853487345
+
+print(iter(lst))
+print(iter(str))
+print(iter(tupl))
+print(iter(dct))
+# числа не итерируемые у них нет инструкции перебора
+print(iter(num))
+
+#Читать - https://metanit.com/python/tutorial/2.7.php
