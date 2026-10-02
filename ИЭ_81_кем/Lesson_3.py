@@ -46,20 +46,21 @@
 # print(iter(st))
 # print(iter(str))
 
-tumb = ["pencil", "pen", "apple"]
-# <list_iterator object at 0x0000021B9EF73AC0> - правило перебора
-# коллекции или нашей тумбочки\
-# получаем правило иитерации
-iter_rule = iter(tumb)
-
-try:
-    while True:
-        next_value = next(iter_rule)
-        print(f'Очередное значение {next_value}')
-except StopIteration:
-    print("Итерация закончена")
+# tumb = ["pencil", "pen", "apple"]
+# # <list_iterator object at 0x0000021B9EF73AC0> - правило перебора
+# # коллекции или нашей тумбочки\
+# # получаем правило иитерации
+# iter_rule = iter(tumb)
+#
+# try:
+#     while True:
+#         next_value = next(iter_rule)
+#         print(f'Очередное значение {next_value}')
+# except StopIteration:
+#     print("Итерация закончена")
 
 # Условие:
+# использовать yeld
 # 1. У вас есть итератор, который выдает размер детали в миллиметрах
 # (например, целые числа от 90 до 110).
 # 2. Эталонный размер детали — 100 мм. Допустимая погрешность — ±2 мм
@@ -69,4 +70,18 @@ except StopIteration:
 # 4. Как только счетчик брака достигнет 3, цикл должен прерваться,
 # и программа должна вывести: «Внимание! Обнаружено 3 бракованные детали.
 # Конвейер остановлен
+
+import random
+
+def conveyor():
+    while True:
+        yield random.randint(95,105)
+
+factory = conveyor()
+
+defective_count = 0
+
+for detail_size in factory:
+    print(f"сканирование детали - {detail_size} мм")
+    # дописать код
 
