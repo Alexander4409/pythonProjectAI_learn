@@ -8,7 +8,7 @@
 #
 # print(f"Connections of user_1 - {social_network["user_1"]}")
 
-# обход в ширину
+# обход графа в ширину
 #from collections import deque
 
 # def bfs(graph, start, target):
@@ -40,7 +40,6 @@
 # }
 #
 # print("Max short from user_1 to user_4", bfs(social_network, "user_1","user_4"))
-
 
 
 
