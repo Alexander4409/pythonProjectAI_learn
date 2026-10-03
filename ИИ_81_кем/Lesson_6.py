@@ -41,5 +41,3 @@
 #
 # print("Max short from user_1 to user_4", bfs(social_network, "user_1","user_4"))
 
-
-
