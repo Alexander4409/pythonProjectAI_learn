@@ -41,13 +41,19 @@
 #
 # print_messages()
 
-#параметры функции
-def base_user_info_5(name,age):
-    user_age = age + 5
-    return f"Привет {name}, тебе сейчас {age}, а через 5 лет станет {user_age}"
+#параметры функции (по умолчанию)
+#!!!!!!!
+# def base_user_info_5(name ,age):
+#     user_age = age + 5
+#     return f"Привет {name}, тебе сейчас {age}, а через 5 лет станет {user_age}"
+#
+#
+# name = input("Укажите имя")
+# age = int(input("Укажите возраст"))
+#
+# print(base_user_info_5(name,age))
 
-
-name = input("Укажите имя")
-age = int(input("Укажите возраст"))
-
-print(base_user_info_5(name,age))
+# def print_person(name="None", age=18):
+#     print(f"Name {name}, age = {age}")
+#
+# print_person("Bob")
