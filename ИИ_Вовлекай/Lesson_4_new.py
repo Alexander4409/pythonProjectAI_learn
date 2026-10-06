@@ -57,3 +57,34 @@
 #     print(f"Name {name}, age = {age}")
 #
 # print_person("Bob")
+
+# def print_person(*, name,age, company):
+#     print(f"Name {name}, age = {age}, company = {company}")
+#
+# print_person(company = "Microsoft", age = 41, name = "Bob")
+# передача именованных параметров
+# def wow(*,run,mark,model,V,color):
+#     print(f'пробег {run},марка {mark}, модель {model}, объем двигателя {V}, цвет {color}')
+#
+# print(wow(run=1000,mark='honda',model='CHR',V=50,color='белый'))
+
+# одновременная передача позиционных и именованных параметров
+# def print_person(name, / ,age = 18, *, company):
+#     print(f"Name {name}, age = {age}, company = {company}")
+#
+# print_person("Bob", company="Google")
+# print_person("Sam",37, company="JetBrains")
+# print_person("Marta", company="JetBrains",age=45)
+
+def summ(*args):
+    res = 0
+    for nums in args:
+        res = res+nums
+    print(f"sum of numbers - {res*2}")
+
+summ(1,2)
+summ(1,2,4,2,5,2,5)
+summ(1,7)
+
+# qwargs!
+# - https://metanit.com/python/tutorial/2.15.php
