@@ -50,3 +50,8 @@ users = {"Tom":{"phone":+595534534,
                 "email":"Super@user1.com",
                 "spin_code":1}}
 
+bob_spin_code = users["Bob"]["spin_code"]
+print(bob_spin_code)
+
+for person, info in users.items():
+    for key, value in .... # Допишите цикл получения данных из комплексного словаря
