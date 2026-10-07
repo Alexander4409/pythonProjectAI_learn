@@ -59,3 +59,4 @@ print(bst.search_data(40))
 print(bst.search_data(99))
 
 #обход бинарных деревьев
+#удаление узла
