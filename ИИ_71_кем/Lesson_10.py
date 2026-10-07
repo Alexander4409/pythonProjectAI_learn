@@ -57,3 +57,5 @@ for person, info in users.items():
     print(f"Пользователь: {person}")
     for key, value in info.items():
         print(f"  {key}: {value}")
+
+# удалить и добавить пользователей
