@@ -43,3 +43,10 @@
 #     print(f"key - {key}, value -  {value}")
 
 # комплексные словари
+users = {"Tom":{"phone":+595534534,
+                "email":"Super@user.com",
+                "spin_code":2},
+         "Bob":{"phone":+595534542,
+                "email":"Super@user1.com",
+                "spin_code":1}}
+
