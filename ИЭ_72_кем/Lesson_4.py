@@ -20,6 +20,9 @@ while i < 10:
         print(f'{i} * {j} = {i*j}', end = "\t")
         j += 1
     print("\n")
+    j = 1
+    i += 1
+
 
 
 
