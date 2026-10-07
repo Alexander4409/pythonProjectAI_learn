@@ -54,4 +54,6 @@ bob_spin_code = users["Bob"]["spin_code"]
 print(bob_spin_code)
 
 for person, info in users.items():
-    for key, value in .... # Допишите цикл получения данных из комплексного словаря
+    print(f"Пользователь: {person}")
+    for key, value in info.items():
+        print(f"  {key}: {value}")
