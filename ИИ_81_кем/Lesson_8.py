@@ -57,3 +57,5 @@ for num in nums:
 
 print(bst.search_data(40))
 print(bst.search_data(99))
+
+#обход бинарных деревьев
