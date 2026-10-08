@@ -107,13 +107,16 @@
 # say_hi()
 # say_bye()
 
-def outer():
-    num = 5
+# def outer():
+#     num = 5
+#
+#     def inner():
+#         nonlocal num
+#         num = 25
+#         print(num)
+#
+#     inner()
+#     print(num)
+#
+# outer()
 
-    def inner():
-        print(num)
-
-    inner()
-    print(num)
-
-outer()
