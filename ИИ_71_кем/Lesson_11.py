@@ -87,3 +87,33 @@
 #         print(f"{pet}:{name}")
 #
 # print_pets_names("john", dog = "Barkly", cat = ["Fluffy", "Larry"], perrot = ["Sheldon"])
+
+# лямбда
+# message = lambda :print("hi")
+#
+# message()
+
+# Область видимости
+#
+# def say_hi():
+#     global name
+#     name = "Sam"
+#     print(f'Hi {name}')
+#
+# def say_bye():
+#     # name = "Tom"
+#     print(f'bye {name}')
+
+# say_hi()
+# say_bye()
+
+def outer():
+    num = 5
+
+    def inner():
+        print(num)
+
+    inner()
+    print(num)
+
+outer()
