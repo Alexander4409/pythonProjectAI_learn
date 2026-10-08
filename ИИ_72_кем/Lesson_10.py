@@ -52,3 +52,64 @@
 # reg_host("John", dog = "Kairo", cat = ["Bastet", "Larry"], parrot = ["Flyer","Poper"])
 
 
+#лямбда функции
+# message = lambda num_1, num_2:print(num_1+num_2)
+#
+# message(5,2)
+
+#Области видимости
+
+# name = "john"
+#
+# def say_hi():
+#     global name
+#     name = "Bob"
+#     print(f'Hi {name}')
+#
+# def say_bye():
+#
+#     print(f'Bye {name}')
+#
+# say_hi()
+# say_bye()
+#
+# def outer():
+#     num = 5
+#     def inner():
+#         nonlocal num
+#         num = 25
+#         print(num)
+#     inner()
+#     print(num)
+# outer()
+#замыкание
+def outer():
+    num = 0
+    def inner():
+        nonlocal num
+        num += 1
+        print(num)
+    return inner
+
+fu = outer()
+
+fu()
+fu()
+fu()
+fu()
+fu()
+fu()
+fu()
+fu()
+fu()
+fu()
+fu()
+fu()
+
+#задача написать робота пицемейкера
+# робот должен принимать заказ от пользователя (учитывать что пользователь может придти не один)
+# робот должен предоставить разное меню для разновозрастных пользователей, после идентификации
+# пользователя и определения тех позиций которые пользователь хочет купить робот должен спросить,
+# как будет проходить оплата (наличнкой или кртой) в случии налички
+# пользователь вводит число боле суммы, а робот выдает сдачу
+
