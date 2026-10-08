@@ -35,4 +35,20 @@
 # # позиционные парметры - / после параметров
 # print(car_info(None))
 
+# def summ(*args):
+#     res = 0
+#     for num in args:
+#         res +=num
+#     print(res)
+#
+# summ(1,2,4,2,5,24,7,3,7,35,2)
+# summ(1,2,4,2,5)
+
+# def reg_host(owner_name, **pets):
+#     print(f"Owner - {owner_name}")
+#     for pet,pet_name in pets.items():
+#         print(f"{pet}, {pet_name}")
+#
+# reg_host("John", dog = "Kairo", cat = ["Bastet", "Larry"], parrot = ["Flyer","Poper"])
+
 
