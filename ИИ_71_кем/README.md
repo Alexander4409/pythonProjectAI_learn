@@ -22,3 +22,4 @@
 | 8 | `Lesson_8.py` | <a href="Lesson_8.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
 | 9 | `Lesson_9.py` | <a href="Lesson_9.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
 | 10 | `Lesson_10.py` | <a href="Lesson_10.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
+| 11 | `Lesson_11.py` | <a href="Lesson_11.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
