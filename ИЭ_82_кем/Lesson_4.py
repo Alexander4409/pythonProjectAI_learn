@@ -79,3 +79,7 @@
 #
 # vet_reg_form("john", dog = "Kairo", cat = ["Bastet", "Lusy"], hamster = ["Turbo", "Tron", "KFS"])\
 #
+# анонимные функции
+suum = lambda num, num2:print(num+num2)
+
+suum(1,2)
