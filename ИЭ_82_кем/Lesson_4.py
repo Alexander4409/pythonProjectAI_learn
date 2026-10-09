@@ -72,9 +72,10 @@
 # summ(1,3,1,4,2,46,25,1,46,54)
 # summ(1,3)
 
-def vet_reg_form(owner_name, **pets):
-    print(f"Owner - {owner_name}")
-    for pet,pet_name in pets.items():
-        print(f"{pet}, {pet_name}")
-
-vet_reg_form("john", dog = "Kairo", cat = ["Bastet", "Lusy"], hamster = ["Turbo", "Tron", "KFS"])
+# def vet_reg_form(owner_name, **pets):
+#     print(f"Owner - {owner_name}")
+#     for pet,pet_name in pets.items():
+#         print(f"{pet}, {pet_name}")
+#
+# vet_reg_form("john", dog = "Kairo", cat = ["Bastet", "Lusy"], hamster = ["Turbo", "Tron", "KFS"])\
+#
