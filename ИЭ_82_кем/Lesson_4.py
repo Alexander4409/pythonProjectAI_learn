@@ -27,3 +27,15 @@
 # manager()
 
 #локальные вызовы функций
+def say_bye():
+    print("Bye")
+
+def say_hi():
+    print("hi")
+
+#управляющая конструкция
+def manager():
+    say_hi()
+    say_bye()
+
+manager()
