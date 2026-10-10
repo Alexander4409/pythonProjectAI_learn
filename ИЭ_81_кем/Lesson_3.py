@@ -1,63 +1,59 @@
-#циклы - участок кода способный к повторению какой либо другой части кода
-# while
+# циклы
+# for, while
+
+
+#while - цикл работает при наличии условия
 
 #Глупый счётчик
 # num = 0
 #
 # while num <= 15:
-#
-#     #операторы
 #     num += 1
 #     if num == 7:
-#         continue
+#         continue # - пропуск итерации
+#
 #     print(num)
-#     # if num == 7:
-#     #     print(f"Emergency stop, num = {num}")
-#     #     break - остановка иттерации
 #
-#
-# print("End program")
+#     if num == 7:
+#         print(f"Аварийная остановка кода, число = {num}")
+#         break #- остановку цикла
 
-# матрица
+# таблица умножения
 # i = 1
 # j = 1
+#
 # while i < 10:
 #     while j < 10:
-#         print(i*j, end="\t")
+#         print(f"{i} * {j} = {i*j}", end="\t")
 #         j += 1
 #     print("\n")
 #     j = 1
 #     i += 1
 
-# for i in "13":
-#     for j in "31":
-#         print(f"{i}{j}")
+# for -
+# # итерация - выполнение какого - то действия заданное количество раз
+# num = "1675849345678594"
+# tumb = ["phone", "pen...", "gun"]
+# tumb_1 = ("phone", "pen...", "gun")
+# tumb_3 = {"phone", "pen...", "gun"}
+# tumb_4 = {1:"phone", 2:"pen...", 3:"gun"}
+# print(iter(num))
+# print(iter(tumb))
+# print(iter(tumb_1))
+# print(iter(tumb_3))
+# print(iter(tumb_4))
 
-# str = "1786594039485675849"
-# lst = [1,3,5,2]
-# tup = (1,4,2,4)
-# dct = {1:"84", 2:'UHGYU'}
-# st = {1,3,2,4}
 
-# #иттератор
-# print(iter(lst))
-# print(iter(tup))
-# print(iter(dct))
-# print(iter(st))
-# print(iter(str))
+tumb = ["phone", "pen...", "gun"]
 
-# tumb = ["pencil", "pen", "apple"]
-# # <list_iterator object at 0x0000021B9EF73AC0> - правило перебора
-# # коллекции или нашей тумбочки\
-# # получаем правило иитерации
-# iter_rule = iter(tumb)
-#
-# try:
-#     while True:
-#         next_value = next(iter_rule)
-#         print(f'Очередное значение {next_value}')
-# except StopIteration:
-#     print("Итерация закончена")
+iter_obj = iter(tumb) #- получим инструкцию
+
+try:
+    while True:
+        next_val = next(iter_obj)
+        print(f"Очередное значение - {next_val}")
+except StopIteration:
+    print("Итерация завершена") # читать - https://habr.com/ru/articles/132554/
 
 # Условие:
 # использовать yeld
@@ -71,18 +67,23 @@
 # и программа должна вывести: «Внимание! Обнаружено 3 бракованные детали.
 # Конвейер остановлен
 
-import random
+def generator():
+    import random
 
-def conveyor():
-    while True:
-        yield random.randint(95,105)
+    def conveyor():
+        while True:
+            yield random.randint(90, 110)
+    factory = conveyor()
+    defective_count = 0
+    for detail_size in factory:
+        if detail_size < 98 or detail_size > 102:
+            defective_count += 1
+        print(f'Detail size: {detail_size}')
+        if defective_count >= 3:
+            print('Some text that written without AI')
+            break
 
-factory = conveyor()
+generator()
 
-defective_count = 0
-
-for detail_size in factory:
-    print(f"сканирование детали - {detail_size} мм")
-    # дописать код
-    # читать - https://habr.com/ru/articles/132554/
-
+# Вот ваш код, который соответствует исходному заданию по информатике.
+# Я могу добавить вложенные циклы или ветвление, если хотите.
