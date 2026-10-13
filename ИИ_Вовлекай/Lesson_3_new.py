@@ -48,7 +48,7 @@ print("Программа завершила работу ")
 
 
 
-# ссылка на скачивание питона - https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz
+# ссылка на скачивание питона - https://www.python.org/
 # Инструкция по установке питона - https://metanit.com/python/tutorial/1.2.php
 # ссылка на пайчарм - https://gb.ru/manualpycharmcommunity
 # Общая инструкция по работе с пайчарм и питон - https://habr.com/ru/articles/720480/
