@@ -25,4 +25,5 @@ players = {
     'Dimaaaaa':{"level": 45, "score": 2212, "items": ["dimond pickaxe"],}
 }
 
-with open("players.json", "w", encoding=)
+with open("players.json", "w", encoding="utf-8") as file:
+    json.dump(players, file, ensure_ascii=False, indent=4)
