@@ -27,3 +27,5 @@ players = {
 
 with open("players.json", "w", encoding="utf-8") as file:
     json.dump(players, file, ensure_ascii=False, indent=4)
+
+# Обновить словарь, создать нового игрока, изменить уровень уже существующего игрока
