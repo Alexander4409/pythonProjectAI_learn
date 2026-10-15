@@ -43,7 +43,6 @@ drinks_menu = [
 ]
 
 
-# Вспомогательные функции для удобного извлечения цен по ID
 def get_price(menu_prices, item_id):
     for d in menu_prices:
         if item_id in d:
@@ -81,7 +80,7 @@ elif num_children == 0:
     drinks_order_input = input()
     drinks_order = list(map(int, drinks_order_input.replace(',', ' ').split())) if drinks_order_input.strip() else []
 
-    # Считаем сумму и количество
+
     for item_id in only_adult_order:
         total_price += get_price(adult_prices, item_id)
         total_items_count += 1
@@ -109,7 +108,7 @@ elif num_children != 0 and num_adults != 0:
     drinks_order_input = input()
     drinks_order = list(map(int, drinks_order_input.replace(',', ' ').split())) if drinks_order_input.strip() else []
 
-    # Считаем сумму и количество
+
     for item_id in adult_order:
         total_price += get_price(adult_prices, item_id)
         total_items_count += 1
