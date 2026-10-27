@@ -79,3 +79,53 @@
 # print(isgenerator(gen_func))
 
 #асинхронное программирование
+
+#не асинхронный код
+# import time
+#
+# def fun1(num):
+#     print(num ** 2)
+#     time.sleep(3)
+#     print("Fun1 - compete")
+#
+# def fun2(num):
+#     print(num ** 0.5)
+#     time.sleep(3)
+#     print("Fun2 - complete")
+#
+# def main():
+#     fun1(4)
+#     fun2(4)
+#
+# print(time.strftime("%X"))
+#
+# main()
+#
+# print(time.strftime("%X"))
+
+#асинхронный
+import asyncio
+import time
+
+async def fun1(num):
+    print(num ** 2)
+    await asyncio.sleep(3)
+    print("Fun1 - compete")
+
+async def fun2(num):
+    print(num ** 0.5)
+    await asyncio.sleep(3)
+    print("Fun2 - compete")
+
+async def main():
+    task1 = asyncio.create_task(fun1(4))
+    task2 = asyncio.create_task(fun2(4))
+
+    await task1
+    await task2
+
+print(time.strftime("%X"))
+
+asyncio.run(main())
+
+print(time.strftime("%X"))
