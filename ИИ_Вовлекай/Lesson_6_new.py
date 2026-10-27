@@ -77,7 +77,6 @@
 #     return output_func
 #
 #
-#
 # @check
 # def print_person(name,age):
 #     print(f"user name - {name}, user age - {age}")
@@ -85,7 +84,6 @@
 # print_person("Tom", 23)
 
 #дз проверка объема двигателя и пробега автомобиля!!!
-
 
 # получение результата функции
 # def check(input_func):
