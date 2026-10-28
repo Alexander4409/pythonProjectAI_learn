@@ -268,17 +268,32 @@ def interface():
             except KeyboardInterrupt:
                 pay_inp = '1'
             if pay_inp == '1':
-                payment = 'наличными'
+                while True:
+                    print('Заплатите сумму чека:')
+                    try:
+                        payed = int(input('>>> '))
+                        if payed == bill:
+                            print(Fore.GREEN + 'Оплата наличными принята. Спасибо!' + Style.RESET_ALL)
+                            break
+                        elif payed > bill:
+                            print(Fore.GREEN + f'Оплата наличными принята. Спасибо! Ваша сдача: {payed - bill}₽' + Style.RESET_ALL)
+                            break
+                        else:
+                            print('Недостаточно средств!')
+                    except:
+                        if ADMIN:
+                            print(Fore.RED + '[ERROR] Введите целое число!' + Style.RESET_ALL)
+                        else:
+                            print('Введите целое число!')
                 break
             elif pay_inp == '2':
-                payment = 'банковской картой'
+                print(Fore.GREEN + 'Оплата банковской картой принята. Спасибо!' + Style.RESET_ALL)
                 break
             else:
                 if ADMIN:
                     print(Fore.RED + '[ERROR] Введите 1 или 2' + Style.RESET_ALL)
                 else:
                     print('Введите 1 или 2')
-        print(Fore.GREEN + f'Оплата {payment} принята. Спасибо!' + Style.RESET_ALL)
 
         try:
             if int(list(history.keys())[-1])+1 < 9999:
