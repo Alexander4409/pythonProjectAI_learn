@@ -130,5 +130,5 @@ asyncio.run(main())
 
 print(time.strftime("%X"))
 
-import aiohttp -
+# import aiohttp -
 # aiofiles
