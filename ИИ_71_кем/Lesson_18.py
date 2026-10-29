@@ -51,3 +51,29 @@
 # print(next(gen))
 # print(next(gen))
 # print(next(gen))
+
+#Асинхронное программирование
+# Базовый случай
+
+# import time
+#
+# def func1(num):
+#     print(num**3)
+#     time.sleep(3)
+#     print("Func1 compete")
+#
+# def func2(num):
+#     print(num**0.5)
+#     time.sleep(3)
+#     print("Func2 complete")
+#
+#
+# def main():
+#     func1(4)
+#     func2(4)
+#
+# print(time.strftime("%X"))
+# main()
+# print(time.strftime("%X"))
+
+# асинхронный код
