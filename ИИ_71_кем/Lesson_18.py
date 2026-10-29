@@ -77,3 +77,32 @@
 # print(time.strftime("%X"))
 
 # асинхронный код
+import time
+import asyncio
+
+
+async def func1(num):
+    print(num ** 3)
+    await asyncio.sleep(3)
+    print("Func1 compete")
+
+
+async def func2(num):
+    print(num ** 0.5)
+    await asyncio.sleep(3)
+    print("Func2 complete")
+
+
+async def main():
+    task1 = asyncio.create_task(func1(4))
+    task2 = asyncio.create_task(func2(4))
+
+    await task1
+    await task2
+
+
+
+
+print(time.strftime("%X"))
+asyncio.run(main())
+print(time.strftime("%X"))
