@@ -19,21 +19,35 @@
 # say_hi()
 # say_bye()
 
-def checker_decor(input_func):
-    def output_func(*args):
-        name = args[0]
-        age = args[1]
-        if age < 0: age = "Error"
-        input_func (name,age)
-    return output_func
-
-
-@checker_decor
-def print_person(name,age):
-    print(f'name - {name}, age - {age}')
-
-print_person('Tom', 9)
-print_person('Jeffry', 56)
-print_person('Marta', 23)
-print_person('Donald', -9999999999999)
-
+# def checker_decor(input_func):
+#     def output_func(*args):
+#         name = args[0]
+#         age = args[1]
+#         if age < 0: age = "Error"
+#         input_func (name,age)
+#     return output_func
+#
+#
+# @checker_decor
+# def print_person(name,age):
+#     print(f'name - {name}, age - {age}')
+#
+# print_person('Tom', 9)
+# print_person('Jeffry', 56)
+# print_person('Marta', 23)
+# print_person('Donald', -9999999999999)
+#
+#
+# Генераторная функция
+# yield - ключевое слово
+# def lasy_couter(num):
+#     count = 1
+#     while count <= num:
+#         yield count
+#         count += 1
+#
+# gen = lasy_couter(3)
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
