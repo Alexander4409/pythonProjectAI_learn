@@ -16,3 +16,27 @@
 # зелёную кнопку Create pull request ещё 2 раза.
 # Спасибо за прочтение инструкции.
 # https://habr.com/ru/companies/yandex_praktikum/articles/700708/
+
+#return
+# def get_numbers_return(num):
+#     result = []
+#     for i in range(num):
+#         result.append(i)
+#     return result
+#
+# my_list = get_numbers_return(1000000000)
+# print(my_list)
+
+
+
+#yield
+def get_numbers_yield(num):
+    for i in range(num):
+        yield i
+
+gen = get_numbers_yield(10000000)
+
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
