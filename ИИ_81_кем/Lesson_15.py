@@ -83,7 +83,7 @@ network = XORNetwork()
 
 print("Start network learn")
 
-for epoc in range(60000):
+for epoc in range(6000000):
     for x1, x2, target in xor_data_learn:
         network.forward(x1,x2)
         network.train(target)
