@@ -92,7 +92,7 @@
 # asyncio.run(main())
 
 # <class '_asyncio.Task'> - частный случай футуры, пердназначен для оборачивания (декорирования ) корутины
-# (<class '_asyncio.Future'>,) - оболочка (разновидность декоратора) которая позволяет
+# (<class '_asyncio.Future'>,) - оболочка (разновидность декоратора) которая позволяет выполнять как-бы все одновременно
 # выполнятся коду асинхронно
 
 # не работающий код (притворяемся что асинхронности нету )
@@ -115,3 +115,26 @@
 #
 #
 # main()
+
+#не удачный пример (без задач (без ракетоносителей))
+import time
+import asyncio
+
+async def func1(num):
+    print(num ** 3)
+    await asyncio.sleep(3)
+    print("Func1 compete")
+
+
+async def func2(num):
+    print(num ** 0.5)
+    await asyncio.sleep(3)
+    print("Func2 complete")
+
+async def main():
+    await func1(4)
+    await func2(4)
+
+print(time.strftime("%X"))
+asyncio.run(main())
+print(time.strftime("%X"))
