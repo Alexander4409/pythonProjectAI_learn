@@ -136,3 +136,11 @@ print(time.strftime("%X"))
 # 3.4822022531844965
 # Func2 - complete
 # 18:17:52
+
+
+# 17:09:28
+# 16
+# 3.4822022531844965
+# func1 - complete
+# func2 - complete
+# 17:09:31
