@@ -48,25 +48,46 @@
 # print("Result of experiment")
 # for outcome, count in stats.items():
 #     print(f"result - num = {outcome} repeat - {count}  ")
-
 import time
-from turtledemo.penrose import start
+import time
+import tracemalloc
+
+stats = {'time': 0, 'memory': 0, 'calls': 0}
 
 
+def profile(func):
+    def wrapper(*args, **kwargs):
+        tracemalloc.start()
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        end = time.perf_counter()
+        _, peak = tracemalloc.get_traced_memory()
+        tracemalloc.stop()
+
+        stats['time'] += end - start
+        stats['memory'] += peak  # Суммируем память всех вызовов
+        stats['calls'] += 1
+
+        print(f"{func.__name__}: {end - start:.4f}с, {peak / 1024:.1f}КБ")
+        return result
+
+    return wrapper
+
+
+@profile
 def heavy(num):
-    for i in range(1,num):
-        for y in range(1,num):
-            i**y
+    for i in range(1, num):
+        for y in range(1, num):
+            i ** y
+
 
 def sequential(num):
     for i in range(num):
-        heavy(5000)
+        heavy(500)
     print(f"{num} - количество циклов вычислений завершено")
 
 if __name__ == '__main__':
     start = time.time()
     sequential(80)
-    end = time.time()
-    print(f'Общее время работы - {end-start}')
-
+    print(f"\nИтого: {stats['calls']} вызовов, {stats['time']:.4f}с, {stats['memory'] / 1024:.1f}КБ")
 
