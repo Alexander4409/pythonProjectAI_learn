@@ -60,13 +60,13 @@ def heavy(num):
 
 def sequential(num):
     for i in range(num):
-        heavy(5000)
+        heavy(500)
     print(f"{num} - количество циклов вычислений завершено")
 
 if __name__ == '__main__':
     start = time.time()
-    sequential(80)
+    sequential(200)
     end = time.time()
     print(f'Общее время работы - {end-start}')
-
+#сделать многопоточный
 
