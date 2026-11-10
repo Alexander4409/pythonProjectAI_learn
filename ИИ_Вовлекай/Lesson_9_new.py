@@ -68,41 +68,73 @@
 # Общее время работы  50.62856197357178
 
 
+# import threading
+# import time
+#
+# def heavy(num, cycle, thread):
+#     for i in range(1,num):
+#         for y in range(1,num):
+#             i ** y
+#
+#     print(f'Циклы - {cycle}, поток - {thread}')
+#
+# def sequential(calc, thread):
+#     print(f'Запускаем поток {thread}')
+#     for cycle in range(calc):
+#         heavy(500, cycle, thread)
+#     print(f'{calc} - циклов вычислений закончено')
+#
+#
+# def threaded(theads, calc):
+#     #thread - количество потоков
+#     #calc - количество операций на поток
+#
+#     threads = []
+#
+#     for thead in range(theads):
+#         task = threading.Thread(target=sequential, args=(calc,thead))
+#         threads.append(task)
+#         task.start()
+#
+#     for task in threads:
+#         task.join()
+#
+#
+# if __name__ == "__main__":
+#     start = time.time()
+#
+#     threaded(4,20)
+#     end = time.time()
+#     print("Общее время работы ", end - start)
+#
+# Общее время работы  43.818674087524414
+
+
 import threading
 import time
 
-def heavy(num, cycle, thread):
-    for i in range(1,num):
-        for y in range(1,num):
-            i ** y
+def heavy():
+    time.sleep(2)
 
-    print(f'Циклы - {cycle}, поток - {thread}')
-
-def sequential(calc, thread):
-    print(f'Запускаем поток {thread}')
-    for cycle in range(calc):
-        heavy(500, cycle, thread)
-    print(f'{calc} - циклов вычислений закончено')
-
-
-def threaded(theads, calc):
-    #thread - количество потоков
-    #calc - количество операций на поток
-
+def threaded(theads):
     threads = []
 
     for thead in range(theads):
-        task = threading.Thread(target=sequential, args=(calc,thead))
+        task = threading.Thread(target=heavy)
         threads.append(task)
         task.start()
 
     for task in threads:
         task.join()
 
+    print(f"{theads} - циклов имитации операции ввода и вывода закончены.")
 
 if __name__ == "__main__":
     start = time.time()
 
-    threaded(4,20)
+    threaded(80)
     end = time.time()
     print("Общее время работы ", end - start)
+
+# Общее время работы  2.059701442718506
+
