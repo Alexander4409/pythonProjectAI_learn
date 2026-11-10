@@ -110,31 +110,75 @@
 # Общее время работы  43.818674087524414
 
 
-import threading
+# import threading
+# import time
+#
+# def heavy():
+#     time.sleep(2)
+#
+# def threaded(theads):
+#     threads = []
+#
+#     for thead in range(theads):
+#         task = threading.Thread(target=heavy)
+#         threads.append(task)
+#         task.start()
+#
+#     for task in threads:
+#         task.join()
+#
+#     print(f"{theads} - циклов имитации операции ввода и вывода закончены.")
+#
+# if __name__ == "__main__":
+#     start = time.time()
+#
+#     threaded(80)
+#     end = time.time()
+#     print("Общее время работы ", end - start)
+
+# Общее время работы 2.059701442718506
+
+#multiprocessing
+
+import multiprocessing
 import time
 
-def heavy():
-    time.sleep(2)
+def heavy(num, cycle, proc):
+    for i in range(1,num):
+        for y in range(1,num):
+            i ** y
 
-def threaded(theads):
-    threads = []
+    print(f'Циклы - {cycle}, поток - {proc}')
 
-    for thead in range(theads):
-        task = threading.Thread(target=heavy)
-        threads.append(task)
-        task.start()
+def sequential(calc, proc):
+    print(f'Запускаем поток {proc}')
+    for cycle in range(calc):
+        heavy(500, cycle, proc)
+    print(f'{calc} - циклов вычислений закончено. Процессор - {proc}')
 
-    for task in threads:
-        task.join()
 
-    print(f"{theads} - циклов имитации операции ввода и вывода закончены.")
+def processesed(procs, calc):
+    #procs - количество ядер процессора
+    #calc - количество операций на ядро
+
+    processes = []
+
+    for proc in range(procs):
+        pro = multiprocessing.Process(target=sequential, args=(calc,proc))
+        processes.append(pro)
+        pro.start()
+
+    for pro in processes:
+        pro.join()
+
 
 if __name__ == "__main__":
     start = time.time()
 
-    threaded(80)
+    num_of_proc = multiprocessing.cpu_count()
+    calc = 80 // num_of_proc + 1
+    processesed(num_of_proc,calc)
     end = time.time()
-    print("Общее время работы ", end - start)
-
-# Общее время работы  2.059701442718506
-
+    print(f" всего ядер в процессоре - {num_of_proc} ")
+    print(f" на каждом ядре произведено {calc} циклов вычислений")
+    print(f" итого {num_of_proc*calc} циклов за время -  {end - start}")
