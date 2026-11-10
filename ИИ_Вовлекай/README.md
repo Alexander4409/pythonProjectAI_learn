@@ -20,3 +20,4 @@
 | 6 | `Lesson_6_new.py` | <a href="Lesson_6_new.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
 | 7 | `Lesson_7_new.py` | <a href="Lesson_7_new.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
 | 8 | `Lesson_8_new.py` | <a href="Lesson_8_new.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
+| 9 | `Lesson_9_new.py` | <a href="Lesson_9_new.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
