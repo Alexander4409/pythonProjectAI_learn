@@ -80,7 +80,7 @@ def heavy(num, cycle, thread):
 
 def sequential(calc, thread):
     print(f'Запускаем поток {thread}')
-    for i in range(calc):
+    for cycle in range(calc):
         heavy(500, cycle, thread)
     print(f'{calc} - циклов вычислений закончено')
 
