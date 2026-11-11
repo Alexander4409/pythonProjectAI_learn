@@ -85,25 +85,21 @@ def sequential(calc, proc):
         heavy(500, i, proc)
     print(f"{calc} - количество циклов вычислений завершено")
 
-def pocessesed(procs, calc):
-    # procs - количество ядер
-    # calc - количество операций на ядре
+def pooled(core = None):
+    num_proc = multiprocessing.cpu_count() if core is None else core
+    calc = int(80/num_proc) if 80%num_proc == 0 else int(80//num_proc+1)
 
-    proceses = []
-    for proc in range(procs):
-        pro = multiprocessing.Process(target = sequential, args=(calc, proc))
-        proceses.append(pro)
-        pro.start()
+    init = map(lambda i:(calc,i), range(num_proc))
+    with multiprocessing.Pool() as pool:
+        pool.starmap(sequential, init)
+    print(calc, num_proc, core)
+    return calc, num_proc,core
 
-        for pro in proceses:
-            pro.join()
 
 
 if __name__ == '__main__':
     start = time.time()
-    num_proc = multiprocessing.cpu_count()
-    calc = 80 // num_proc + 1
-    pocessesed(num_proc,calc)
+
     end = time.time()
     print(f'Общее время работы - {end-start}')
     print(f"На каждом ядре выполнено {calc} циклов вычислений ")
