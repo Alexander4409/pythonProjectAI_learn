@@ -50,7 +50,7 @@
 #     print(f"result - num = {outcome} repeat - {count}  ")
 
 import time
-from turtledemo.penrose import start
+
 
 
 def heavy(num):
@@ -65,8 +65,9 @@ def sequential(num):
 
 if __name__ == '__main__':
     start = time.time()
-    sequential(200)
+    sequential(80)
     end = time.time()
     print(f'Общее время работы - {end-start}')
-#сделать многопоточный
 
+# 80 - количество циклов вычислений завершено
+# Общее время работы - 44.92769956588745
