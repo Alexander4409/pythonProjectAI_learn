@@ -71,36 +71,44 @@ import multiprocessing
 import time
 
 
-
-
 def heavy(num, cycle, proc):
-    for i in range(1,num):
-        for y in range(1,num):
-            i**y
+    for i in range(1, num):
+        for y in range(1, num):
+            _ = i ** y
+
+    if cycle in (0, 4, 9, 19):
         print(f"Cycle - {cycle}, core - {proc}")
 
+
 def sequential(calc, proc):
-    print(f"launch flow - {proc}")
+    print(f"launch process - {proc}")
     for i in range(calc):
         heavy(500, i, proc)
     print(f"{calc} - количество циклов вычислений завершено")
 
-def pooled(core = None):
+
+def pooled(core=None):
     num_proc = multiprocessing.cpu_count() if core is None else core
-    calc = int(80/num_proc) if 80%num_proc == 0 else int(80//num_proc+1)
+    calc = int(80 / num_proc) if 80 % num_proc == 0 else int(80 // num_proc + 1)
 
-    init = map(lambda i:(calc,i), range(num_proc))
-    with multiprocessing.Pool() as pool:
+    init = [(calc, n) for n in range(num_proc)]
+
+    with multiprocessing.Pool(processes=num_proc) as pool:
         pool.starmap(sequential, init)
-    print(calc, num_proc, core)
-    return calc, num_proc,core
 
+    print(f"\n[Внутри pooled] calc: {calc}, num_proc: {num_proc}, core: {core}")
+    return calc, num_proc, core
 
 
 if __name__ == '__main__':
     start = time.time()
 
+
+    calc, num_proc, core = pooled(4)
+
     end = time.time()
-    print(f'Общее время работы - {end-start}')
-    print(f"На каждом ядре выполнено {calc} циклов вычислений ")
-    print(f'Итого {num_proc*calc} циклов за - {end-start}')
+
+    print(f'Общее время работы - {end - start:.2f} сек')
+    print(f"На каждом ядре выполнено {calc} циклов вычислений")
+    print(f'Итого {num_proc * calc} циклов за - {end - start:.2f} сек')
+
