@@ -69,3 +69,42 @@
 
 import multiprocessing
 import time
+
+
+
+
+def heavy(num, cycle, proc):
+    for i in range(1,num):
+        for y in range(1,num):
+            i**y
+        print(f"Cycle - {cycle}, core - {proc}")
+
+def sequential(calc, proc):
+    print(f"launch flow - {proc}")
+    for i in range(calc):
+        heavy(500, i, proc)
+    print(f"{calc} - количество циклов вычислений завершено")
+
+def pocessesed(procs, calc):
+    # procs - количество ядер
+    # calc - количество операций на ядре
+
+    proceses = []
+    for proc in range(procs):
+        pro = multiprocessing.Process(target = sequential, args=(calc, proc))
+        proceses.append(pro)
+        pro.start()
+
+        for pro in proceses:
+            pro.join()
+
+
+if __name__ == '__main__':
+    start = time.time()
+    num_proc = multiprocessing.cpu_count()
+    calc = 80 // num_proc + 1
+    pocessesed(num_proc,calc)
+    end = time.time()
+    print(f'Общее время работы - {end-start}')
+    print(f"На каждом ядре выполнено {calc} циклов вычислений ")
+    print(f'Итого {num_proc*calc} циклов за - {end-start}')
