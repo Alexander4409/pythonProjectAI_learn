@@ -93,39 +93,58 @@ def time_manager(func):
 # threaded(80)
 
 
-
+import time
+import math
 import multiprocessing
 
 
+def time_manager(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        res = func(*args, **kwargs)
+        end = time.time()
+        print(f"Время выполнения: {end - start:.2f} сек.")
+        return res
+
+    return wrapper
+
+
 def heavy(num, cycle, core):
-    for i in range(1,num):
-        for y in range(1,num):
-            i**y
-        print(f"Цикл - {cycle}, Ядро - {core}")
+    for i in range(1, num):
+        for y in range(1, num):
+            i ** y
+    print(f"Цикл - {cycle}, Ядро - {core}")
 
 
 def sequential(calc, core):
     print(f"Запуск вычислений на ядре - {core}")
     for i in range(calc):
         heavy(500, i, core)
-    print(f"{calc} - количество циклов вычислений завершено")
-
-
+    print(f"Ядро {core}: {calc} циклов вычислений завершено")
 
 
 @time_manager
 def processes(cores, calc):
-    #theads - количество ядер
-
-
     procs = []
-
     for proc in range(cores):
-        core_task = multiprocessing.Process(target=sequential, args=(calc,cores))
+        # Передаем proc (номер текущего процесса), а не общее число cores
+        core_task = multiprocessing.Process(target=sequential, args=(calc, proc))
         procs.append(core_task)
         core_task.start()
 
     for core_task in procs:
         core_task.join()
 
+
+if __name__ == "__main__":
+    num_proc = multiprocessing.cpu_count()
+    total_cycles = 80
+    calc = math.ceil(total_cycles / num_proc)
+
+    processes(num_proc, calc)
+
+    print("-" * 35)
+    print(f"Всего логических ядер в процессоре: {num_proc}")
+    print(f"На каждом ядре выполнено вычислений: {calc}")
+    print(f"Итого циклов: {num_proc * calc}")
 
