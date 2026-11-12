@@ -68,25 +68,64 @@ def time_manager(func):
 # 20 - количество циклов вычислений завершено
 # Время выполнения : 27.079733848571777
 
-import threading
+# import threading
+#
+# def heavy():
+#     time.sleep(2)
+#
+#
+# @time_manager
+# def threaded(theads):
+#     #theads - количество потоков
+#
+#     threads = []
+#
+#     for thead in range(theads):
+#         task = threading.Thread(target = heavy)
+#         threads.append(task)
+#         task.start()
+#
+#     for task in threads:
+#         task.join()
+#     print(f"{theads} - циклов имитации операций ожидания завершено")
+#
+#
+# threaded(80)
 
-def heavy():
-    time.sleep(2)
+
+
+import multiprocessing
+
+
+def heavy(num, cycle, core):
+    for i in range(1,num):
+        for y in range(1,num):
+            i**y
+        print(f"Цикл - {cycle}, Ядро - {core}")
+
+
+def sequential(calc, core):
+    print(f"Запуск вычислений на ядре - {core}")
+    for i in range(calc):
+        heavy(500, i, core)
+    print(f"{calc} - количество циклов вычислений завершено")
+
+
 
 
 @time_manager
-def threaded(theads):
-    #theads - количество потоков
+def processes(cores, calc):
+    #theads - количество ядер
 
-    threads = []
 
-    for thead in range(theads):
-        task = threading.Thread(target = heavy)
-        threads.append(task)
-        task.start()
+    procs = []
 
-    for task in threads:
-        task.join()
-    print(f"{theads} - циклов имитации операций ожидания завершено")
+    for proc in range(cores):
+        core_task = multiprocessing.Process(target=sequential, args=(calc,cores))
+        procs.append(core_task)
+        core_task.start()
+
+    for core_task in procs:
+        core_task.join()
 
 
