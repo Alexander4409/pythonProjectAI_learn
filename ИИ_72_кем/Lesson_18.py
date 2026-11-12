@@ -2,10 +2,12 @@ import time
 
 
 def time_manager(func):
-    def wrapper():
-        time.time()
-        func()
-        time.time()
+    def wrapper(*args,**qwargs):
+        start = time.time()
+        res = func(*args, **qwargs)
+        end = time.time()
+        print(f"Время выполнения : {end - start}")
+        return res
     return wrapper
 
 
@@ -23,3 +25,7 @@ def sequential(num):
 
 
 sequential(80)
+
+
+# 80 Циклов вычислений выполнены
+# Время выполнения : 29.588422060012817
