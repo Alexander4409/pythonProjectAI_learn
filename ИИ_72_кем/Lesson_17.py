@@ -196,44 +196,47 @@
 #GIL - глобальный протокол блокирования интерпритатора
 
 
-import threading
-import time
-from collections import Counter
+# import threading
+# import time
+# from collections import Counter
+#
+# result = []
+#
+# def run_experiment():
+#     global num
+#     num = 2
+#
+#     def cooker_1():
+#         global num
+#         current = num
+#         time.sleep(0.000001)
+#         num = current + 2
+#
+#     def cooker_2():
+#         global num
+#         current = num
+#         time.sleep(0.000001)
+#         num = current * 3
+#
+#     t1 = threading.Thread(target=cooker_1)
+#     t2 = threading.Thread(target=cooker_2)
+#
+#     t1.start()
+#     t2.start()
+#
+#     t1.join()
+#     t2.join()
+#
+#     return num
+#
+# for i in range(5000):
+#     final_num = run_experiment()
+#     result.append(final_num)
+#
+# stat = Counter(result)
+#
+# for outcome, count in stat.items():
+#     print(f" res num = {outcome}, repeat = {count}")
+#
 
-result = []
 
-def run_experiment():
-    global num
-    num = 2
-
-    def cooker_1():
-        global num
-        current = num
-        time.sleep(0.000001)
-        num = current + 2
-
-    def cooker_2():
-        global num
-        current = num
-        time.sleep(0.000001)
-        num = current * 3
-
-    t1 = threading.Thread(target=cooker_1)
-    t2 = threading.Thread(target=cooker_2)
-
-    t1.start()
-    t2.start()
-
-    # t1.join()
-    # t2.join()
-
-    return num
-
-for i in range(5000):
-    final_num = run_experiment()
-    result.append(final_num)
-
-stat = Counter(result)
-
-for outcome, count in stat.items():
-    print(f" res num = {outcome}, repeat = {count}")
