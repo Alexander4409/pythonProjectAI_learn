@@ -35,23 +35,55 @@
 
 # область видимости и замыкания
 
-name = "Mary"
-
-def say_name():
-    global name
-    name = "Bob"
-    print(name)
-
-def say_name1():
-    print(name)
-    def say_name2():
-        print(name)
-    return say_name2()
-
-
-print(name)
-say_name()
-say_name1()
+# name = "Mary"
+#
+# def say_name():
+#     global name
+#     name = "Bob"
+#     print(name)
+#
+# def say_name1():
+#     print(name)
+#     def say_name2():
+#         print(name)
+#     return say_name2()
+#
+#
+# print(name)
+# say_name()
+# say_name1()
 
 #существует некий идентификатор области видимости
-# и параметр global делает контекст глобальным для всех функций вне и внутри их
+#и параметр global делает контекст глобальным
+#для всех функций вне и внутри их
+
+# nonlocal
+
+# def outer():
+#     num = 5
+#
+#     def inner():
+#         nonlocal num
+#         num = 25
+#         print(num)
+#
+#     inner()
+#     print(num)
+#
+# outer()
+
+#замыкания
+def outer():
+    num = 1
+    def inner():
+        nonlocal num
+        num += 1
+        print(num)
+
+    return inner
+
+fn = outer()
+fn()
+fn()
+fn()
+fn()
