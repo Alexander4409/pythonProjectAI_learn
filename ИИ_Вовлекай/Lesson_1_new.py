@@ -36,7 +36,7 @@
 #     print(f'num:id {id(num)}')
 #     print(f'num_2:id {id(num_2)}')
 #
-#     num += 1#Икримент
+#     num += 1#Инкримент
 #     print(f'num:id {id(num)}')
 #
 #
