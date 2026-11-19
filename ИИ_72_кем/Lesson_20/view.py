@@ -1,3 +1,5 @@
+from operator import itemgetter
+
 
 def decor_func(input_func):
     def outer_func():
@@ -17,6 +19,7 @@ def show_menu():
           "3. Пополнить запасы робота\n"
           "0. Выключить робота")
 
+@decor_func
 def show_status(state):
     print('Текущий статус робота \n'
           f'Состояние - {state['status']}\n'
@@ -27,3 +30,21 @@ def show_status(state):
         print(f'- {item.capitalize()}: {count} шт.')
 
 
+def ask_menu_choice():
+    return input("Ваш выбор").strip()
+
+
+def ask_toppings(available_toppings):
+    print(f'Доступные топпинги - {', ' .join(available_toppings)}\n'
+          f'Введите нужные ингредиенты через запятую или нажмите enter для пропуска')
+    raw_input = input("> ").strip().lower()
+
+    if not raw_input:
+        return []
+    return [item.strip() for item in raw_input.split(",")]
+
+
+def show_message(message):
+    print(f"[Информация] - {message}")
+
+def show
