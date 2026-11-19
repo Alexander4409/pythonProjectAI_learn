@@ -45,4 +45,22 @@ def add_topping(topping):
     return True, f"Добавлено: {topping}"
 
 def bake_pizza():
-    ...
+    if not robot_state["current_pizza"]:
+        return False, "В печи пусто, сначала собери пиццу"
+    robot_state["status"] = "Разогрев печи и выпекания..."
+    robot_state["temperature"] = 250
+    time.sleep(2)
+
+    finished_pizza = list(robot_state["current_pizza"])
+    robot_state["current_pizza"] = []
+    robot_state["temperature"] = 22
+    robot_state["status"] = "Ожидает заказ"
+    robot_state["orders_completed"] += 1
+
+    return True, finished_pizza
+
+def restock_ingredients():
+    for item in robot_state["ingredients"]:
+        robot_state['ingredients'][item] = 5
+    robot_state["status"] = "Запасы пополнены "
+    return "Все ингредиенты до 5 единиц"
