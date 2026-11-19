@@ -24,5 +24,6 @@ def show_status(state):
           f'Выполнено заказов {state["orders_completed"]}\n'
           f'Остатки ингредиентов :\n')
     for item, count in state["ingredients"].items():
-        print()
+        print(f'- {item.capitalize()}: {count} шт.')
+
 
