@@ -37,4 +37,12 @@ def start_pizza():
 def add_topping(topping):
     if topping not in AVAILABLE_TOPPINGS:
         return False, f"Ингридиент {topping} не поддерживается"
-    if robot_state["ingredients"].
+    if robot_state["ingredients"].get(topping, 0) <= 0:
+        return False, f"Закончился ингридиент: {topping}"
+    robot_state["ingredients"][topping] -= 1
+    robot_state["current_pizza"].append(topping)
+    robot_state["status"] = f"Добавление: {topping}"
+    return True, f"Добавлено: {topping}"
+
+def bake_pizza():
+    ...
