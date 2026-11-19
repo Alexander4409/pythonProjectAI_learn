@@ -36,3 +36,4 @@ fake_for()
 print("fake for complity")
 real_for()
 print("real for complity")
+#здрасвуйсте, а где посмотреть свои была по олимпиаде Всош
