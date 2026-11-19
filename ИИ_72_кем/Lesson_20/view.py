@@ -47,4 +47,13 @@ def ask_toppings(available_toppings):
 def show_message(message):
     print(f"[Информация] - {message}")
 
-def show
+
+def show_error(error_message):
+    print(f"[Ошибка] - {error_message}")
+
+
+def show_finished_pizza(ingredients_list):
+    print("Пицца готова !\n"
+          f"состав - {', '.join(ingredients_list)}\n"
+          f"Приятного аппетита!")
+
