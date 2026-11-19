@@ -33,3 +33,4 @@
 | 19 | `Lesson_19.py` | <a href="Lesson_19.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
 | 20 | `Lesson_20.py` | <a href="Lesson_20.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
 | 21 | `Lesson_21.py` | <a href="Lesson_21.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
+| 22 | `Lesson_22.py` | <a href="Lesson_22.py"><img src="https://raw.githubusercontent.com/SayGGGo/pythonProjectAI_learn/master/.github/assets/buttons/open.svg" alt="Открыть" width="105"></a> |
