@@ -71,14 +71,14 @@
 # user_info("Bob", 33, True)
 
 # именованные параметры спец символ - * после него параметры ДОЛЖНЫ быть ТОЛЬКО именованными
-def user_info( name, age, is_maried, company,/):
-    print(f"user info\n"
-          f"user name - {str(name)}\n"
-          f"user age - {int(age)}\n"
-          f"user family status - {bool(is_maried)}\n"
-          f"user company - {str(company)}")
-
-
-user_info(age = 23, name = "Kelly", is_maried = False, company="microsoft")
-user_info("Bob", 33, True, company = "apple")
+# def user_info( name, age, is_maried,*, company,):
+#     print(f"user info\n"
+#           f"user name - {str(name)}\n"
+#           f"user age - {int(age)}\n"
+#           f"user family status - {bool(is_maried)}\n"
+#           f"user company - {str(company)}")
+#
+#
+# user_info(age = 23, name = "Kelly", is_maried = False, company="microsoft")
+# user_info("Bob", 33, True, company = "apple")
 
