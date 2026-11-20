@@ -55,3 +55,9 @@ async def func_2(num):
 async def main():
     task1 = asyncio.create_task(func_1(4))
     task2 = asyncio.create_task(func_2(4))
+
+    await task1
+    await task2
+
+
+asyncio.run(main())
