@@ -51,7 +51,7 @@ async def func_2(num):
     print("Func_2 Работу завершил")
 
 
-@time_manager
+
 async def main():
     task1 = asyncio.create_task(func_1(4))
     task2 = asyncio.create_task(func_2(4))
@@ -59,5 +59,8 @@ async def main():
     await task1
     await task2
 
+@time_manager
+def manager():
+    asyncio.run(main())
 
-asyncio.run(main())
+manager()
