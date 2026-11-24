@@ -150,25 +150,50 @@
 
 #Наследование от нескольких классов
 
-class Student:
+# class Student:
+#
+#     def study(self):
+#         print(f'Student - study')
+#
+#
+# class Employer:
+#
+#     def work(self):
+#         print(f"Employer - works")
+#
+#
+# class WorkingStudent(Employer,Student):
+#     pass
+#
+#
+# tom = WorkingStudent()
+# tom.work()
+# tom.study()
 
-    def study(self):
-        print(f'Student - study')
-
-
+# Использовать с осторожностью
 class Employer:
 
-    def work(self):
+    def do(self):
         print(f"Employer - works")
+
+
+class Student:
+
+    def do(self):
+        print(f"Student - works")
 
 
 class WorkingStudent(Employer,Student):
     pass
 
-
 tom = WorkingStudent()
-tom.work()
-tom.study()
+tom.do()
+
+
+print(WorkingStudent.__mro__)
+print(WorkingStudent.mro())
+
+
 # Задача на методы доступа
 
 
