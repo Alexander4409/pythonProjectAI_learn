@@ -65,26 +65,27 @@ from tkinter.font import names
 #     def dispay_info(self):
 #         print(f"Модель - {self.model}, Марка автомобиля - {self.brend}, Цвет кузова - {self.color}")
 #
-# car_1 = Car("CRV", "Toyota", "Белый")
+# car_1 = Car(color = "Белый", model = "CRV", brend = "Toyota")
+
+car_1.dispay_info()
+
+# import time
 #
-# car_1.dispay_info()
-import time
-
-class Dish:
-    def __init__(self,dish_name):
-        self.dish_name = dish_name
-        print(f"Повар приготовил - {self.dish_name}")
-
-
-    # деструктор
-
-    def __del__(self):
-        time.sleep(3)
-        print(f'Еда под названием {self.dish_name} выдана посетителю ресторана')
-
-
-def create_dish():
-    shrimps = Dish('Креветки')
-
-create_dish()
-print("ресторан закрылся работа программы завершена")
+# class Dish:
+#     def __init__(self,dish_name):
+#         self.dish_name = dish_name
+#         print(f"Повар приготовил - {self.dish_name}")
+#
+#
+#     # деструктор
+#
+#     def __del__(self):
+#         time.sleep(3)
+#         print(f'Еда под названием {self.dish_name} выдана посетителю ресторана')
+#
+#
+# def create_dish():
+#     shrimps = Dish('Креветки')
+#
+# create_dish()
+# print("ресторан закрылся работа программы завершена")
