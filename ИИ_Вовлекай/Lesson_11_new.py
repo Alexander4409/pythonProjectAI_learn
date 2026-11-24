@@ -114,40 +114,61 @@
 #Супер класс(родительский класс), производный класс (Класс ребенок)
 #DRYKISS
 
-class Person:
-    def __init__(self, name):
-        self.__name = name
+# class Person:
+#     def __init__(self, name):
+#         self.__name = name
+#
+#     @property
+#     def name(self):
+#         return self.__name
+#
+#     def display_info(self):
+#         print(f"Имя - {self.__name}")
+#
+#
+# class Employer(Person):
+#
+#     def work(self):
+#         print(f"{self.name} works")
+#
+#
+# class Student(Person):
+#
+#     def study(self):
+#         print(f'{self.name} study')
+#
+# tom = Employer("Tom")
+# print(tom.name)
+# tom.display_info()
+# tom.work()
+#
+# bob = Student("Bob")
+# print(bob.name)
+# bob.display_info()
+# bob.study()
 
-    @property
-    def name(self):
-        return self.__name
 
-    def display_info(self):
-        print(f"Имя - {self.__name}")
+#Наследование от нескольких классов
 
-
-class Employer(Person):
-
-    def work(self):
-        print(f"{self.name} works")
-
-
-class Student(Person):
+class Student:
 
     def study(self):
-        print(f'{self.name} study')
+        print(f'Student - study')
 
-tom = Employer("Tom")
-print(tom.name)
-tom.display_info()
+
+class Employer:
+
+    def work(self):
+        print(f"Employer - works")
+
+
+class WorkingStudent(Employer,Student):
+    pass
+
+
+tom = WorkingStudent()
 tom.work()
-
-bob = Student("Bob")
-print(bob.name)
-bob.display_info()
-bob.study()
-
-
+tom.study()
 # Задача на методы доступа
 
 
