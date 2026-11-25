@@ -171,27 +171,27 @@
 # tom.study()
 
 # Использовать с осторожностью
-class Employer:
-
-    def do(self):
-        print(f"Employer - works")
-
-
-class Student:
-
-    def do(self):
-        print(f"Student - works")
-
-
-class WorkingStudent(Employer,Student):
-    pass
-
-tom = WorkingStudent()
-tom.do()
-
-
-print(WorkingStudent.__mro__)
-print(WorkingStudent.mro())
+# class Employer:
+#
+#     def do(self):
+#         print(f"Employer - works")
+#
+#
+# class Student:
+#
+#     def do(self):
+#         print(f"Student - works")
+#
+#
+# class WorkingStudent(Employer,Student):
+#     pass
+#
+# tom = WorkingStudent()
+# tom.do()
+#
+#
+# print(WorkingStudent.__mro__)
+# print(WorkingStudent.mro())
 
 
 # Задача !
@@ -229,3 +229,78 @@ print(WorkingStudent.mro())
 
 # Точно так же в классе WorkingStudent можно вызвать конструкторы Employer и Student.
 
+class Person:
+    def __init__(self, name):
+        self.__name = name
+
+    @property
+    def name(self):
+        return self.__name
+
+    def display_info(self):
+        print(f"Имя: {self.__name}")
+
+
+class Student(Person):
+    def __init__(self, name, scholarship):
+        Person.__init__(self, name)
+        self.__scholarship = 0
+        self.set_scholarship(scholarship)
+
+    @property
+    def scholarship(self):
+        return self.__scholarship
+
+    def set_scholarship(self, amount):
+        if amount < 0:
+            print("Ошибка: стипендия не может быть отрицательной!")
+        else:
+            self.__scholarship = amount
+
+    def study(self):
+        print(f"{self.name} учится. Стипендия: {self.__scholarship}")
+
+
+class Employer(Person):
+    def __init__(self, name, salary):
+        Person.__init__(self, name)
+        self.__salary = 0
+        self.set_salary(salary)
+
+    @property
+    def salary(self):
+        return self.__salary
+
+    def set_salary(self, amount):
+        if amount < 0:
+            print("Ошибка: зарплата не может быть отрицательной!")
+        else:
+            self.__salary = amount
+
+    def work(self):
+        print(f"{self.name} работает. Зарплата: {self.__salary}")
+
+
+class WorkingStudent(Employer, Student):
+    def __init__(self, name, salary, scholarship):
+
+        Employer.__init__(self, name, salary)
+        Student.__init__(self, name, scholarship)
+
+    def get_total_income(self):
+        return self.salary + self.scholarship
+
+
+# --- Проверка работы ---
+bob = Student("Bob", 5000)
+bob.study()
+bob.set_scholarship(-1000)
+
+tom = Employer("Tom", 50000)
+tom.work()
+
+alex = WorkingStudent("Alex", 30000, 4000)
+alex.display_info()
+alex.work()
+alex.study()
+print(f"Общий доход {alex.name}: {alex.get_total_income()}")
