@@ -34,5 +34,27 @@ def ask_menu_choice():
 
 
 def ask_toppings(available_toppings):
-    print()
+    print(f'Доступные топинги -  {", ". join(available_toppings)}\n'
+          f'Введите нужные ингредиенты через запятую или нажмите enter')
+    raw_input = input("> ").strip().lower()
+    if not raw_input:
+        return []
+    return [item.strip() for item in raw_input.split(",")]
+
+@decor
+def show_message(message):
+    print(f'[ИНФО] - {message}')
+
+
+@decor
+def show_error(error_message):
+    print(f'[ОШИБКА] - {error_message}')
+
+
+@decor
+def show_finished_pizza(ingredients_list):
+    print(f'Пицца готова !\n'
+          f'Состав - {', '.join(ingredients_list)}.\n'
+          f'Приятного аппетита')
+
 
