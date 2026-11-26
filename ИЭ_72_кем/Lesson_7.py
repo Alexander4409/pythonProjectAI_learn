@@ -77,12 +77,20 @@
 # print_person("Bob", 13, True)
 # print_person(name = "Pavel", status = False)
 
-#*args
-def summ(*args):
-    res = 0
-    for i in args:
-        res += i
-    return res
 
-print(summ(1,2,4,2,54,6,42,6,2,6457,244,68,2))
-print(summ(1,2,68,2))
+#передача большого количества не именнованных параметров
+#*args
+# def summ(*args):
+#     res = 0
+#     counter = 0
+#     for i in args:
+#         res += i
+#         counter += 1
+#     return res/counter
+#
+# print(summ(1,2,4,2,54,6,42,6,2,6457,244,68,2))
+# print(summ(1,2,68,2))
+
+
+#**qwargs
+
