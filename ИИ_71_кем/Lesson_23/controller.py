@@ -52,3 +52,14 @@ def run_robot():
             handle_make_pizza()
 
         elif choice == "2":
+            handel_show_status()
+
+        elif choice == "3":
+            handle_restock()
+
+        elif choice == "0":
+            view.show_message("Выключение")
+            break
+
+        else:
+            view.show_error("Неизвестная команда")

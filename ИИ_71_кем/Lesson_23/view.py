@@ -18,7 +18,7 @@ def show_menu():
           f"3 - Пополнить запасы продуктов \n"
           f"0 - Выключить робота ")
 
-@decor
+
 def show_status(state):
     print(f"___ТЕКУЩИЙ СТАТУС РОБОТА___\n"
           f"Состояние - {state["status"]}\n"
@@ -41,17 +41,17 @@ def ask_toppings(available_toppings):
         return []
     return [item.strip() for item in raw_input.split(",")]
 
-@decor
+
 def show_message(message):
     print(f'[ИНФО] - {message}')
 
 
-@decor
+
 def show_error(error_message):
     print(f'[ОШИБКА] - {error_message}')
 
 
-@decor
+
 def show_finished_pizza(ingredients_list):
     print(f'Пицца готова !\n'
           f'Состав - {', '.join(ingredients_list)}.\n'
