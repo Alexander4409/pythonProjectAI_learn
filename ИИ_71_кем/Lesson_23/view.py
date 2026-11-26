@@ -25,12 +25,12 @@ def show_status(state):
           f"Температура - {state["temperature"]} oC\n"
           f"Выполнено заказов - {state["orders_completed"]}\n"
           f"Остатки ингредиентов -")
-    for item, count in state["ingredients"].item():
+    for item, count in state["ingredients"].items():
         print(f' - {item.capitalize()} : {count} ед.')
 
 
 def ask_menu_choice():
-    return input("Ваш выбор - ").split()
+    return input("Ваш выбор - ").strip()
 
 
 def ask_toppings(available_toppings):
