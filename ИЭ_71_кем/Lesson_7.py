@@ -10,6 +10,7 @@
 #
 #
 # say_hi()
+from itertools import count
 
 
 #Обычная функция
@@ -81,4 +82,7 @@
 #
 # user_info(age = 23, name = "Kelly", is_maried = False, company="microsoft")
 # user_info("Bob", 33, True, company = "apple")
+
+
+
 
