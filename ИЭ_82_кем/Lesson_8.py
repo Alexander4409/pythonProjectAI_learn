@@ -121,3 +121,4 @@ print(type(func_1(4)))
 
 # <class 'function'>
 # <class 'coroutine'> - корутина (разновидность генератора)
+
